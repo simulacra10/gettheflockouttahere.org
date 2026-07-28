@@ -1,0 +1,10 @@
+<footer class="border-t-2 border-ink-900 mt-16 bg-plate-dark">
+  <div class="max-w-5xl mx-auto px-4 py-8 font-mono text-xs text-ink-500 flex flex-wrap items-center justify-between gap-4">
+    <p class="max-w-xl">{{ .Site.Params.footer_note }}</p>
+    <ul class="flex gap-x-5 uppercase tracking-wide">
+      {{ range .Site.Menus.footer }}
+      <li><a href="{{ .URL | relLangURL }}" class="no-underline text-ink-500 hover:text-accent-600">{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+  </div>
+</footer>

@@ -1,0 +1,19 @@
+{{/* Usage: {{< council-table >}} — renders data/council.yaml as a contact table. */}}
+<table class="not-prose w-full text-sm border-collapse my-4">
+  <thead>
+    <tr class="text-left border-b-2 border-accent-600">
+      <th class="py-2 pr-4 font-mono text-xs uppercase tracking-widest text-ink-500">Role</th>
+      <th class="py-2 pr-4 font-mono text-xs uppercase tracking-widest text-ink-500">Name</th>
+      <th class="py-2 font-mono text-xs uppercase tracking-widest text-ink-500">Contact</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{ range site.Data.council }}
+    <tr class="border-b border-ink-900/10 hover:bg-accent-600/5">
+      <td class="py-2.5 pr-4 text-ink-700">{{ .role }}</td>
+      <td class="py-2.5 pr-4 font-semibold text-ink-900">{{ .name }}</td>
+      <td class="py-2.5 font-mono text-xs"><a href="mailto:{{ .email }}">{{ .email }}</a></td>
+    </tr>
+    {{ end }}
+  </tbody>
+</table>

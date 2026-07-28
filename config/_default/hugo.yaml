@@ -1,0 +1,35 @@
+baseURL: "https://gettheflockouttahere.org/"
+languageCode: "en-us"
+title: "DeFlock Easton"
+theme: "deflock"
+
+enableRobotsTXT: false
+
+build:
+  writeStats: false
+
+markup:
+  goldmark:
+    renderer:
+      # Content is authored only by site maintainers via shortcodes (legal-ref,
+      # stat-card, stat-grid, council-table) that emit HTML; without this,
+      # Goldmark silently strips their output from paired {{% %}} shortcodes.
+      unsafe: true
+  highlight:
+    noClasses: false
+
+outputs:
+  home:
+    - HTML
+    - RSS
+  section:
+    - HTML
+    - RSS
+
+taxonomies: {}
+
+permalinks:
+  updates: "/updates/:slug/"
+  # :filename (not :slug) because changelog entry titles routinely contain a
+  # slash (e.g. "... on /costs/"), which corrupts a title-derived slug.
+  changelog: "/changelog/:filename/"

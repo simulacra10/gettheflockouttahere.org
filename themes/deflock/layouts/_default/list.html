@@ -1,0 +1,110 @@
+{{ define "main" }}
+{{ if .IsHome }}
+
+  <div class="text-center mb-10">
+    <img
+      src="{{ "images/DeFlockEaston-v2.png" | relURL }}"
+      alt="DeFlock Easton — GetTheFlockOuttaHere.org"
+      class="mx-auto w-full max-w-sm h-auto"
+      width="1248" height="832"
+    >
+  </div>
+
+  <section class="max-w-3xl mx-auto text-center">
+    <p class="eyebrow">What gets logged · no warrant required</p>
+    <h1 class="text-4xl sm:text-5xl mt-3 leading-[1.05]">{{ .Title }}</h1>
+    {{ with .Params.subhead }}
+    <p class="font-serif text-lg text-ink-700 mt-4 max-w-2xl mx-auto">{{ . }}</p>
+    {{ end }}
+  </section>
+
+  {{/* Illustrative only — not a claimed screenshot or verified field list
+       from Flock's actual software. Field categories (plate, location,
+       time, match status) reflect how ALPR systems are generally described
+       to work; exact schema, retention, and sharing depend on the contract
+       Easton signs. The "SPECIMEN" stamp and bracketed placeholder values
+       exist specifically so this reads as illustrative, not as a captured
+       real-world example. */}}
+  <div class="scan-panel max-w-2xl mx-auto mt-8">
+    <div class="scan-frame" aria-hidden="true"></div>
+    <div class="relative text-right">
+      <p class="scan-stamp" aria-hidden="true">Specimen</p>
+    </div>
+    <dl class="scan-readout">
+      <div class="scan-line"><dt class="scan-label">CAMERA STATUS</dt><dd class="scan-value">ACTIVE</dd></div>
+      <div class="scan-line"><dt class="scan-label">LOCATION</dt><dd class="scan-value">[ANY STREET IN TOWN]</dd></div>
+      <div class="scan-line"><dt class="scan-label">PLATE READ</dt><dd class="scan-value">[YOUR PLATE]</dd></div>
+      <div class="scan-line"><dt class="scan-label">DATE / TIME</dt><dd class="scan-value">[EVERY PASS]</dd></div>
+      <div class="scan-line"><dt class="scan-label">HOTLIST MATCH</dt><dd class="scan-alert">[LOGGED EITHER WAY]</dd></div>
+      <div class="scan-line"><dt class="scan-label">RETENTION</dt><dd class="scan-value">[SET BY CONTRACT]</dd></div>
+    </dl>
+    <p class="scan-caption">
+      Illustrative, not a screenshot of Flock's software. 
+    </p>
+  </div>
+
+  <section class="prose-site mt-10">
+    {{ .Content }}
+    <p class="not-italic">
+      <a href="{{ "/take-action/" | relURL }}" class="btn-primary">
+        Take action
+      </a>
+    </p>
+  </section>
+
+{{ else if eq .Section "changelog" }}
+
+  <header class="mb-8 max-w-3xl mx-auto">
+    <p class="eyebrow mb-2">Correction log</p>
+    <h1 class="text-3xl">{{ .Title }}</h1>
+    <div class="prose-site !mx-0 mt-3">{{ .Content }}</div>
+  </header>
+  <ol class="space-y-6 max-w-3xl mx-auto">
+    {{ range .Pages.ByDate.Reverse }}
+    <li class="border-l-2 border-ink-900/10 pl-5">
+      <span class="badge badge-{{ .Params.type | default "update" }}">{{ .Params.type | default "update" }}</span>
+      <p class="font-mono text-xs text-ink-500 mt-2">{{ .Date.Format "2006-01-02" }}</p>
+      <h2 class="text-lg mt-1"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      {{ with .Params.summary }}<p class="mt-1 text-ink-700 font-serif">{{ . }}</p>{{ end }}
+      <p class="text-sm mt-2 space-x-3">
+        {{ with .Params.affected_page }}<span class="text-ink-500">Affects: <code>{{ . }}</code></span>{{ end }}
+        {{ with .Params.source_url }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Source ↗</a>{{ end }}
+      </p>
+    </li>
+    {{ end }}
+  </ol>
+
+{{ else if eq .Section "updates" }}
+
+  <header class="mb-8 max-w-3xl mx-auto">
+    <p class="eyebrow mb-2">Field log</p>
+    <h1 class="text-3xl">{{ .Title }}</h1>
+    <div class="prose-site !mx-0 mt-3">{{ .Content }}</div>
+  </header>
+  <ol class="space-y-6 max-w-3xl mx-auto">
+    {{ range .Pages.ByDate.Reverse }}
+    <li>
+      <p class="font-mono text-xs text-ink-500">{{ .Date.Format "2006-01-02" }}</p>
+      <h2 class="text-lg mt-1"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      {{ with .Summary }}<p class="mt-1 text-ink-700 font-serif">{{ . }}</p>{{ end }}
+    </li>
+    {{ end }}
+  </ol>
+
+{{ else }}
+
+  <header class="mb-8 max-w-3xl mx-auto">
+    <h1 class="text-3xl">{{ .Title }}</h1>
+    <div class="prose-site !mx-0 mt-3">{{ .Content }}</div>
+  </header>
+  <ul class="space-y-4 max-w-3xl mx-auto">
+    {{ range .Pages }}
+    <li>
+      <h2 class="text-lg"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      {{ with .Summary }}<p class="mt-1 text-ink-700 font-serif">{{ . }}</p>{{ end }}
+    </li>
+    {{ end }}
+  </ul>
+
+{{ end }}
+{{ end }}

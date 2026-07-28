@@ -1,0 +1,41 @@
+---
+title: "Every car that passes gets read."
+subhead: "Easton already has two Flock Safety automatic license plate reader cameras installed. That is two too many. Here's what that means and how to help get them removed."
+description: "Easton already has two Flock Safety automatic license plate reader cameras installed. That is two too many. Here's what that means and how to help get them removed."
+---
+Americans have always understood that government power needs limits. Before the Revolution, British officials used general warrants and writs of assistance to search broadly without naming a specific person, place, or crime. The Founding generation rejected that kind of power because government should not be allowed to investigate everyone in the hope of finding someone who has done something wrong.
+
+That principle does not end when we leave our homes. Driving on a public street means other people may see us. It does not mean the government should be allowed to identify us, record where we went, build a searchable history of our movements, and store that information in case it becomes useful later. Being seen in public is not the same as consenting to government surveillance.
+
+That is why this is not optional. Easton received its official beginning in 1710 under colonial rule. In 1788, the same year Maryland ratified the United States Constitution, the town was renamed Easton. Our local government has existed on both sides of the American rejection of arbitrary government power. It should understand better than most why that history cannot be ignored.
+
+Easton must reject and ban mass-surveillance systems that record the movements and identities of people who are suspected of no crime. A government with roots reaching back to colonial America should not recreate the general warrant with cameras, databases, and software.
+
+This campaign exists to stop that from happening. Easton should remove the Flock cameras already in place and pass an ordinance banning automatic license-plate readers and other systems designed to track the public without suspicion, a warrant, or probable cause.
+
+If you oppose mass surveillance in Easton, contact the mayor and Town Council, attend the next council meeting, and tell them plainly: people who are suspected of no crime should not be tracked by their own government.
+
+[Take Action](/take-action/).
+
+## In the news
+
+[Flock Safety CEO speaks out after LAPD suspends use of company's surveillance cameras](https://abc7.com/post/flock-safety-ceo-speaks-lapd-suspends-use-companys-surveillance-cameras/19558358/) — ABC7 Los Angeles
+
+[Flock Cameras Vanish as Cities Bag Them and Cancel Contracts Amid Privacy Revolt](https://www.webpronews.com/flock-cameras-vanish-as-cities-bag-them-and-cancel-contracts-amid-privacy-revolt/) — WebProNews
+
+[Flock CEO Announces 'Nationwide Safety Audit' for Controversial Cameras to Begin in Tennessee](https://tennesseestar.com/justice/flock-ceo-announces-nationwide-safety-audit-for-controversial-cameras-to-begin-in-tennessee/tpappert/2026/07/23/) — Tennessee Star
+
+[90,000 Flock cameras have quietly gone up in the US: What they track and how to check your city](https://www.zdnet.com/article/flock-ai-cameras-risks-us-how-to-find-nearby-what-they-track/) — ZDNET
+
+[Inside the growing police use and misuse of Flock's license-plate reader cameras](https://www.cnn.com/2026/07/26/us/flock-cameras-surveillance-abuse) — CNN
+
+[Flock Safety Crosses 100,000 Cameras as 53 Cities Cancel Over Unauthorized Federal Data Access](https://www.techtimes.com/articles/319317/20260629/flock-safety-crosses-100000-cameras-53-cities-cancel-over-unauthorized-federal-data-access.htm) — TechTimes
+
+[Woodburn shuts down Flock Safety camera network after concerns over federal access](https://katu.com/news/local/audit-confirmed-federal-agencies-accessed-woodburn-flock-safety-camera-network-portland-oregon-immigration-enforcement-department-of-homeland-security) — KATU
+
+[Framingham police will not renew Flock Safety contract after months of resident opposition](https://www.boston.com/news/local-news/2026/06/25/framingham-police-will-not-renew-flock-safety-contract-after-months-of-resident-opposition/) — Boston.com
+
+[Flock says its cameras don't track people, training videos say otherwise](https://www.investigatetv.com/2026/06/15/flock-says-its-cameras-dont-track-people-its-own-training-videos-say-otherwise/) — InvestigateTV
+
+[Flock Safety's Quiet Spread: How One Company's Cameras Are Reshaping American Streets and Privacy Debates](https://www.webpronews.com/flock-safetys-quiet-spread-how-one-companys-cameras-are-reshaping-american-streets-and-privacy-debates/) — WebProNews
+

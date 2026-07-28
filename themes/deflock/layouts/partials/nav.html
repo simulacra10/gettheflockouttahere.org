@@ -1,0 +1,17 @@
+<header class="border-b border-ink-900/10">
+  <nav class="max-w-5xl mx-auto flex flex-wrap items-center justify-between gap-4 px-4 py-4">
+    <a href="{{ "/" | relURL }}" class="no-underline text-ink-900 font-sans font-extrabold text-lg tracking-tight">
+      {{ .Site.Title }}
+    </a>
+    <ul class="flex flex-wrap gap-x-5 gap-y-2">
+      {{ range .Site.Menus.main }}
+      <li>
+        <a
+          href="{{ .URL | relLangURL }}"
+          class="no-underline font-mono text-xs uppercase tracking-wide pb-1 border-b-2 {{ if $.IsMenuCurrent "main" . }}border-accent-600 text-ink-900 font-semibold{{ else }}border-transparent text-ink-700 hover:text-accent-600 hover:border-accent-600/40{{ end }}"
+        >{{ .Name }}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </nav>
+</header>

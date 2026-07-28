@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-plate text-ink-900 antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-sans font-extrabold tracking-tight text-ink-900;
+  }
+  a {
+    @apply text-accent-600 underline-offset-2;
+  }
+  a:hover {
+    @apply text-accent-500;
+  }
+  ::selection {
+    @apply bg-accent-600 text-plate;
+  }
+  :focus-visible {
+    outline: 2px solid theme("colors.accent.600");
+    outline-offset: 2px;
+  }
+  code {
+    @apply font-mono text-[0.9em];
+  }
+}
+
+@layer components {
+  /* Long-form reading: serif body, but headings inside prose stay on the
+     display sans so the editorial contrast (blunt sans / quiet serif)
+     holds even mid-article. */
+  .prose-site {
+    @apply max-w-3xl mx-auto space-y-4 leading-relaxed text-ink-700 font-serif text-[1.05rem];
+  }
+  .prose-site :is(h1, h2, h3, h4) {
+    @apply font-sans text-ink-900;
+  }
+  .prose-site a {
+    @apply underline decoration-accent-600/40 hover:decoration-accent-600;
+  }
+  /* Tailwind's preflight strips default list markers site-wide; opt back
+     in here since prose content routinely has real ordered/unordered
+     lists (news roundups, capture-field lists, etc). */
+  .prose-site ol {
+    @apply list-decimal list-outside pl-5 space-y-2;
+  }
+  .prose-site ul {
+    @apply list-disc list-outside pl-5 space-y-2;
+  }
+  .prose-site li::marker {
+    @apply text-accent-600;
+  }
+
+  /* Small mono uppercase label naming what *kind* of record a section is
+     (BUDGET RECORD, CITATION INDEX, ...) — a real dossier convention, not
+     decoration. */
+  .eyebrow {
+    @apply font-mono text-xs font-semibold uppercase tracking-[0.2em] text-accent-600;
+  }
+
+  /* Recurring "mounted plate" motif: two bolt dots pinning the card down,
+     echoing the license plate this whole system is built from. */
+  .plate-card {
+    @apply relative rounded-sm border border-ink-900/10 bg-white/60 p-5;
+  }
+  .plate-card::before,
+  .plate-card::after {
+    content: "";
+    @apply absolute top-2.5 h-1.5 w-1.5 rounded-full bg-ink-900/15;
+  }
+  .plate-card::before { left: 0.625rem; }
+  .plate-card::after { right: 0.625rem; }
+
+  /* Primary action: a citation-ticket button — solid hotlist red with two
+     punched notches at the vertical edges, like a tear-off stub. */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-sm bg-accent-600 px-6 py-3
+           font-sans text-sm font-bold uppercase tracking-wide text-plate
+           no-underline hover:bg-accent-700 transition-colors;
+    background-image:
+      radial-gradient(circle at 0 50%, theme("colors.plate.DEFAULT") 5px, transparent 5.5px),
+      radial-gradient(circle at 100% 50%, theme("colors.plate.DEFAULT") 5px, transparent 5.5px);
+  }
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 rounded-sm border-2 border-ink-900 px-5 py-2.5
+           font-mono text-xs font-semibold uppercase tracking-wide text-ink-900
+           no-underline hover:bg-ink-900 hover:text-plate transition-colors;
+  }
+
+  /* Changelog / update badges: a ticket-stub look (mono, dashed divider)
+     rather than a generic pill, color-mapped to what the label means. */
+  .badge {
+    @apply inline-flex items-center gap-1.5 border-l-2 border-dashed pl-2 pr-2.5 py-0.5
+           font-mono text-[0.7rem] font-semibold uppercase tracking-widest;
+  }
+  .badge-correction {
+    @apply border-accent-600 text-accent-600 bg-accent-600/5;
+  }
+  .badge-update {
+    @apply border-citation text-citation bg-citation/10;
+  }
+  .badge-addition {
+    @apply border-scanner text-scanner bg-scanner-light;
+  }
+
+  /* Signature element: the capture panel. A dark CRT-style readout showing
+     exactly what an ALPR camera logs per vehicle, per pass. */
+  .scan-panel {
+    @apply relative overflow-hidden rounded-md bg-panel px-5 py-6 sm:px-8 sm:py-8;
+  }
+  .scan-frame {
+    @apply pointer-events-none absolute inset-4 sm:inset-6 rounded-sm border border-scanner-phosphor/40;
+    animation: scan-pulse 3.2s ease-in-out infinite;
+  }
+  .scan-frame::before,
+  .scan-frame::after {
+    content: "";
+    @apply absolute h-3 w-3 border-scanner-phosphor;
+  }
+  .scan-frame::before { top: -1px; left: -1px; border-top: 2px solid; border-left: 2px solid; }
+  .scan-frame::after { top: -1px; right: -1px; border-top: 2px solid; border-right: 2px solid; }
+  .scan-readout {
+    @apply relative space-y-1.5 font-mono text-[0.8rem] sm:text-sm text-scanner-phosphor;
+  }
+  .scan-line {
+    @apply flex flex-wrap justify-between gap-x-3 border-b border-scanner-phosphor/10 pb-1.5;
+  }
+  .scan-line:last-child {
+    @apply border-none pb-0;
+  }
+  .scan-label {
+    @apply text-scanner-phosphor/60;
+  }
+  .scan-value {
+    @apply font-semibold;
+  }
+  .scan-alert {
+    @apply font-semibold text-citation-light;
+  }
+  .scan-caption {
+    @apply relative mt-5 max-w-prose font-sans text-sm text-plate/70;
+  }
+  /* Borrows the real specimen/void stamp convention used on sample checks
+     and forms — marks the panel as illustrative at a glance, not just in
+     the caption text. Normal flow (not absolutely positioned over the
+     readout) so it can't overlap the data rows at any viewport width. */
+  .scan-stamp {
+    @apply inline-block -rotate-6 rounded-sm border-2 border-citation-light/70
+           px-2 py-0.5 mb-3
+           font-mono text-[0.65rem] font-bold uppercase tracking-[0.15em] text-citation-light/70;
+  }
+
+  @keyframes scan-pulse {
+    0%, 100% { opacity: 0.55; }
+    50% { opacity: 1; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .scan-frame {
+      animation: none;
+      opacity: 1;
+    }
+  }
+}

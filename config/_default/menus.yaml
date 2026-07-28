@@ -1,0 +1,24 @@
+main:
+  - name: "What is Flock?"
+    pageRef: "/what-is-flock/"
+    weight: 10
+  - name: "Local Status"
+    pageRef: "/local-status/"
+    weight: 20
+  - name: "Take Action"
+    pageRef: "/take-action/"
+    weight: 30
+  - name: "FAQ"
+    pageRef: "/faq/"
+    weight: 40
+  - name: "Updates"
+    pageRef: "/updates/"
+    weight: 50
+  - name: "About"
+    pageRef: "/about/"
+    weight: 60
+
+footer:
+  - name: "About"
+    pageRef: "/about/"
+    weight: 10

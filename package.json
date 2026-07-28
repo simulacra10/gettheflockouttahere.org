@@ -1,0 +1,17 @@
+{
+  "name": "deflockeaston-org",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static advocacy site opposing Flock Safety ALPR deployment in Easton and Talbot County, MD.",
+  "scripts": {
+    "build:css": "tailwindcss --config ./themes/deflock/tailwind.config.js -i ./themes/deflock/assets/css/main.css -o ./static/css/main.css --minify",
+    "watch:css": "tailwindcss --config ./themes/deflock/tailwind.config.js -i ./themes/deflock/assets/css/main.css -o ./static/css/main.css --watch",
+    "build": "npm run build:css && hugo --gc --minify",
+    "dev": "npm run build:css && hugo server -D"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17"
+  }
+}
