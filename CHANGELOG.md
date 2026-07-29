@@ -6,6 +6,14 @@ Format based on Keep a Changelog (keepachangelog.com).
 ## [Unreleased]
 
 ## [2026-07-29]
+### Fixed
+- `.page-hero img` on the Liberty essay: removed the grayscale filter per
+  feedback (full color now), and replaced `object-position: top` with
+  `center 30%`. The source portrait has a lot of headroom above the head;
+  `top` cropped on blank background and cut off the chin — worst on short
+  viewports (~700px tall), where it cut through the eyes entirely.
+  Verified across mobile, short-desktop, and tall-desktop heights.
+
 ### Changed
 - Redesigned rendering of `/liberty-is-not-the-price-of-safety/` as a proper
   broadside/pamphlet page rather than plain prose:

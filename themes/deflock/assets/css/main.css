@@ -190,8 +190,12 @@
     @apply relative -mx-4 sm:mx-0 overflow-hidden sm:rounded-md;
   }
   .page-hero img {
-    @apply w-full h-[38vh] sm:h-[46vh] object-cover object-top;
-    filter: grayscale(1) contrast(1.08);
+    @apply w-full h-[38vh] sm:h-[46vh] object-cover;
+    /* The source portrait has a lot of headroom before the face starts —
+       object-top crops on blank background above the head and cuts off
+       the chin. 30% keeps the eyes/face as the anchor at any crop
+       height, from tall mobile strips to short wide desktop ones. */
+    object-position: center 30%;
   }
   .hero-quote {
     @apply relative overflow-hidden -mx-4 sm:mx-0 sm:rounded-md bg-ink-900
