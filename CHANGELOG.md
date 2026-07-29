@@ -6,6 +6,16 @@ Format based on Keep a Changelog (keepachangelog.com).
 ## [Unreleased]
 
 ## [2026-07-29]
+### Added
+- Added `LICENSE` (MIT) at the repo root. Footer now links to it and to
+  the GitHub repo (`config/_default/menus.yaml`, footer menu); external
+  footer links open in a new tab. `footer.html` now distinguishes
+  external (`url:`) from internal (`pageRef:`) menu entries so absolute
+  GitHub URLs aren't run through `relLangURL`.
+- Added `README.md`: explicitly invites forking/copying/modifying for
+  other towns' anti-ALPR campaigns, ties that back to the MIT license,
+  and documents local dev/build commands.
+
 ### Fixed
 - Nav wordmark linked to `{{ "/" | relURL }}`, which — unlike every other
   link on the site, all resolved through Hugo's menu/page system — doesn't

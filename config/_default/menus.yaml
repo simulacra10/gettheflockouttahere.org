@@ -22,3 +22,9 @@ footer:
   - name: "About"
     pageRef: "/about/"
     weight: 10
+  - name: "GitHub"
+    url: "https://github.com/simulacra10/gettheflockouttahere.org"
+    weight: 20
+  - name: "MIT License"
+    url: "https://github.com/simulacra10/gettheflockouttahere.org/blob/main/LICENSE"
+    weight: 30
