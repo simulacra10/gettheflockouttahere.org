@@ -7,6 +7,14 @@ Format based on Keep a Changelog (keepachangelog.com).
 
 ## [2026-07-29]
 ### Fixed
+- Nav wordmark linked to `{{ "/" | relURL }}`, which — unlike every other
+  link on the site, all resolved through Hugo's menu/page system — doesn't
+  get the baseURL's subpath prepended. Harmless on the real domain (no
+  subpath), but on the GitHub Pages preview it sent the logo link to
+  `simulacra10.github.io/` instead of `.../gettheflockouttahere.org/`.
+  Fixed with `.Site.Home.RelPermalink`, the correct way to link home.
+
+### Fixed
 - `.page-hero img` on the Liberty essay: removed the grayscale filter per
   feedback (full color now), and replaced `object-position: top` with
   `center 30%`. The source portrait has a lot of headroom above the head;
