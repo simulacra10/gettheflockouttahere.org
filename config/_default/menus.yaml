@@ -2,6 +2,9 @@ main:
   - name: "What is Flock?"
     pageRef: "/what-is-flock/"
     weight: 10
+  - name: "Liberty Is Not the Price of Safety"
+    pageRef: "/liberty-is-not-the-price-of-safety/"
+    weight: 20
   - name: "Take Action"
     pageRef: "/take-action/"
     weight: 30

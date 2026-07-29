@@ -5,6 +5,12 @@ Format based on Keep a Changelog (keepachangelog.com).
 
 ## [Unreleased]
 
+## [2026-07-29]
+### Added
+- Added `/liberty-is-not-the-price-of-safety/` (new page bundle with hero
+  image) to the main nav, right after "What is Flock?"
+  (`config/_default/menus.yaml`).
+
 ## [2026-07-28]
 ### Changed
 - Disabled `/local-status/` rather than deleting it: added
