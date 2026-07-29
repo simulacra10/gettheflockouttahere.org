@@ -13,6 +13,14 @@ Format based on Keep a Changelog (keepachangelog.com).
   `top` cropped on blank background and cut off the chin — worst on short
   viewports (~700px tall), where it cut through the eyes entirely.
   Verified across mobile, short-desktop, and tall-desktop heights.
+- `object-position: center 30%` still wasn't right on normal-height desktop
+  (cropped his hairline) — root cause was `h-[Nvh]` sizing the hero off
+  *viewport height*, so the same crop percentage landed differently on
+  every window size. Switched to a fixed `aspect-[3/4] sm:aspect-[16/9]`
+  (driven by container width, which is far more constrained) so the crop
+  is deterministic, then tuned `object-position` once against that.
+  Verified identical framing at 900px, 700px, and 500px viewport heights
+  at the same width, plus mobile.
 
 ### Changed
 - Redesigned rendering of `/liberty-is-not-the-price-of-safety/` as a proper

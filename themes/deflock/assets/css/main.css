@@ -190,12 +190,15 @@
     @apply relative -mx-4 sm:mx-0 overflow-hidden sm:rounded-md;
   }
   .page-hero img {
-    @apply w-full h-[38vh] sm:h-[46vh] object-cover;
-    /* The source portrait has a lot of headroom before the face starts —
-       object-top crops on blank background above the head and cuts off
-       the chin. 30% keeps the eyes/face as the anchor at any crop
-       height, from tall mobile strips to short wide desktop ones. */
-    object-position: center 30%;
+    @apply w-full aspect-[3/4] sm:aspect-[16/9] object-cover;
+    /* aspect-ratio (driven by container width) instead of vh-based height:
+       vh height made the crop window depend on browser window HEIGHT, so
+       the same object-position looked centered on one screen and cut off
+       the head or chin on another. Width is far more constrained, so one
+       tuned position now holds across viewports. On the narrow mobile
+       ratio there's ~zero vertical overflow (height-driven fit), so this
+       only really acts on the wide sm+ banner crop. */
+    object-position: center 20%;
   }
   .hero-quote {
     @apply relative overflow-hidden -mx-4 sm:mx-0 sm:rounded-md bg-ink-900
