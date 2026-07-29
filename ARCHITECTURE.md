@@ -44,7 +44,7 @@ deflockeaston/
 ├── content/
 │   ├── _index.md
 │   ├── what-is-flock/_index.md
-│   ├── local-status/_index.md
+│   ├── local-status/_index.md   # disabled: `_build: {render: false, list: false}`
 │   ├── take-action/_index.md
 │   ├── faq/_index.md
 │   ├── updates/
@@ -105,7 +105,6 @@ only for this site and isn't published separately.
 ```
 /                  Home: the issue, the ask, the stakes
 /what-is-flock/    Explainer: ALPR, what cameras capture, how data flows
-/local-status/     Where things stand in Easton / Talbot County
 /take-action/      Discord link, contact templates, meeting schedule
 /faq/
 /updates/          Dated posts: council meetings, records requests, news

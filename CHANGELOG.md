@@ -6,6 +6,14 @@ Format based on Keep a Changelog (keepachangelog.com).
 ## [Unreleased]
 
 ## [2026-07-28]
+### Changed
+- Disabled `/local-status/` rather than deleting it: added
+  `_build: {render: false, list: false}` to `content/local-status/_index.md`
+  so it produces no page, no sitemap entry, and 404s even by direct URL,
+  while keeping the source in the repo for a future re-enable. Removed it
+  from the nav (`config/_default/menus.yaml`) and its eyebrow-label entry
+  in `single.html`. No other page linked to it.
+
 ### Removed
 - Eliminated Session as a community channel: dropped the "Join on Session"
   button from `/take-action/`, the `session_url` param, the FAQ mention,

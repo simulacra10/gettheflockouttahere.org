@@ -4,15 +4,12 @@ layout: single
 description: "How to get involved: community channels, contact templates, and the local meeting schedule."
 ---
 
-## Join the conversation
+## Join the conversation on our Discord server
 
-Coordination happens off-site. No accounts or forms on this site collect
-anything — join directly:
 
-{{< community-link >}}Join the Discord{{< /community-link >}}
 
-If you join the Discord, read the house rules pinned in the welcome channel
-first — this topic draws bad-faith joiners.
+{{< community-link >}} DeFlock Easton Discord{{< /community-link >}}
+
 
 ## Contact your Easton Town Council representatives
 
@@ -20,9 +17,4 @@ first — this topic draws bad-faith joiners.
 
 ## Easton Town Council Meeting schedule
 
-Town Council meetings can also be viewed on Mid Shore Community Television channel 98 (MCTV98). We will also be streaming meetings [live](https://www.eastonmd.gov/129/Agendas-Minutes)
-
-Check the [Local Status](/local-status/) page and the town/county public
-calendars for upcoming council meetings where camera removal or a ban
-ordinance could appear on the agenda. Public comment periods are the
-highest-leverage moment to speak up.
+Town Council meetings can also be viewed on Mid Shore Community Television channel 98 (MCTV98). They are also  streamed  [live](https://www.eastonmd.gov/129/Agendas-Minutes)
