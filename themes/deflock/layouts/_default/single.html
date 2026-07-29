@@ -7,10 +7,14 @@
   "take-action" "HOW TO RESPOND"
   "faq" "COMMONLY ASKED"
   "about" "ABOUT THIS RECORD"
+  "liberty-is-not-the-price-of-safety" "A PAMPHLET FOR EASTON"
 }}
 <article class="max-w-3xl mx-auto">
   <header class="mb-8">
-    {{ with .Params.type }}<span class="badge badge-{{ . }} mb-3">{{ . }}</span>{{ end }}
+    {{/* type badge is only meaningful for changelog entries
+         (correction/update/addition); other content can carry an
+         unrelated Hugo `type` front matter value we shouldn't render. */}}
+    {{ if eq .Section "changelog" }}{{ with .Params.type }}<span class="badge badge-{{ . }} mb-3">{{ . }}</span>{{ end }}{{ end }}
     {{ with index $eyebrows .Section }}<p class="eyebrow mb-2">{{ . }}</p>{{ end }}
     <h1 class="text-3xl sm:text-4xl">{{ .Title }}</h1>
     {{ if .Params.date }}

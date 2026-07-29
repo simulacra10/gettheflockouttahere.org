@@ -35,7 +35,7 @@ keywords:
   <footer>Benjamin Franklin, 1755</footer>
 </blockquote>
 
-# We Did Not Inherit Liberty So Easton Could Build a Surveillance Network
+## We Did Not Inherit Liberty So Easton Could Build a Surveillance Network
 
 In 2026, Americans are celebrating 250 years since the Declaration of Independence announced that government exists to secure the rights of the people and derives its legitimate power from their consent.
 
@@ -57,7 +57,7 @@ But efficiency does not transform arbitrary power into legitimate power.
 
 **A digital general warrant is still a general warrant.**
 
-## Government Must Suspect Someone Before Investigating Them
+### Government Must Suspect Someone Before Investigating Them
 
 Automatic license plate reader surveillance reverses the proper order of law enforcement.
 
@@ -73,7 +73,7 @@ Under a surveillance system, the government collects information about everyone 
 
 Those are not the same thing.
 
-## Being Visible in Public Is Not Consent to Government Tracking
+### Being Visible in Public Is Not Consent to Government Tracking
 
 A person standing beside the road may see one car pass at one moment.
 
@@ -91,7 +91,7 @@ The difference is not merely where the observation occurs.
 
 The difference is the systematic identification, accumulation, retention, and searchability of information about people who are not suspected of any crime.
 
-## Public Safety Does Not Erase Constitutional Limits
+### Public Safety Does Not Erase Constitutional Limits
 
 Every expansion of government power can be defended by naming a frightening crime it might help solve.
 
@@ -117,7 +117,7 @@ The question is whether usefulness alone gives the government the right to colle
 
 It does not.
 
-## Private Ownership Does Not Make Government Surveillance Private
+### Private Ownership Does Not Make Government Surveillance Private
 
 Easton cannot escape responsibility merely because a corporation owns the cameras, operates the network, or stores the records.
 
@@ -133,7 +133,7 @@ A corporate database can still become a government investigative tool.
 
 A contract does not erase the public’s right to object.
 
-## Temporary Promises Create Permanent Infrastructure
+### Temporary Promises Create Permanent Infrastructure
 
 The cameras will always be defended with exceptional examples.
 
@@ -155,7 +155,7 @@ Franklin’s warning was not that safety is unimportant. It was that essential l
 
 A town that builds permanent surveillance infrastructure in response to temporary fears has made exactly that bargain.
 
-# The Revolution Was Not Fought for More Efficient Government Surveillance
+## The Revolution Was Not Fought for More Efficient Government Surveillance
 
 The Declaration of Independence was not a complaint that British government was insufficiently effective.
 
@@ -175,7 +175,7 @@ That distinction is the dividing line between policing and mass surveillance.
 
 **A surveillance state records populations.**
 
-## “But These Cameras Make Us Safer”
+### “But These Cameras Make Us Safer”
 
 Perhaps they sometimes help police locate a wanted vehicle.
 
@@ -197,7 +197,7 @@ It is:
 
 Until that question is answered, claims about usefulness are beside the point.
 
-## Trust Is Not a Safeguard
+### Trust Is Not a Safeguard
 
 Supporters of surveillance frequently answer concerns by assuring the public that officials will use the system responsibly.
 
@@ -223,7 +223,7 @@ A system that depends entirely on permanent good judgment is not a protected sys
 
 It is an invitation to abuse.
 
-## Innocence Should Not Require an Explanation
+### Innocence Should Not Require an Explanation
 
 A person should not have to explain why he drove through town, visited a doctor, attended a political meeting, entered a church parking lot, met with an attorney, stayed at a hotel, or spent time at another person’s home.
 
@@ -241,7 +241,7 @@ It treats the absence of evidence as a reason to gather more information.
 
 That is incompatible with the presumption of innocence.
 
-# Easton Must Choose
+## Easton Must Choose
 
 Easton received its official beginning under colonial government in 1710.
 
@@ -255,11 +255,11 @@ Liberty is preserved when government is offered a useful power and nevertheless 
 
 Easton should not celebrate America’s founding while constructing the kind of indiscriminate surveillance authority its founding principles condemn.
 
-**Remove the cameras.**
-
-**Reject future deployments.**
-
-**Pass an ordinance banning automatic license plate reader surveillance in Easton.**
+<div class="proclamation">
+  <p>Remove the cameras.</p>
+  <p>Reject future deployments.</p>
+  <p>Pass an ordinance banning automatic license plate reader surveillance in Easton.</p>
+</div>
 
 That is how a town honors 250 years of American liberty.
 

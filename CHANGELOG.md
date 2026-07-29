@@ -6,6 +6,31 @@ Format based on Keep a Changelog (keepachangelog.com).
 ## [Unreleased]
 
 ## [2026-07-29]
+### Changed
+- Redesigned rendering of `/liberty-is-not-the-price-of-safety/` as a proper
+  broadside/pamphlet page rather than plain prose:
+  - `.page-hero`/`.hero-quote` CSS added (`main.css`) — these classes were
+    already in the page's markdown but were never styled, so the Franklin
+    portrait and pull-quote rendered as plain unstyled elements. Portrait
+    gets a duotone (grayscale) treatment; the quote gets a dark ink panel
+    with an oversized decorative quotation mark and mono attribution.
+  - Added a `.proclamation` component for the page's closing call to
+    action, using the same dark-panel "voice" as the hero quote so
+    Franklin's historical judgment and the present-day ask visually rhyme.
+  - `.prose-site` headings had no type scale at all (Tailwind's preflight
+    normalizes every heading to the same size), so h1/h2/h3 were visually
+    identical — fixed with real sizes and a top-rule divider on h2 for part
+    breaks. Also styled bare `<blockquote>` (previously invisible).
+  - Fixed heading levels in the content itself: the page had four H1s (the
+    template's own title plus three `#` part-dividers in the body) — the
+    three body dividers are now `##`, and their `##` subheads are now
+    `###`, giving one clean two-tier structure under the page's real H1.
+  - `single.html`'s type badge (correction/update/addition, meant only for
+    changelog entries) was firing for *any* page with a Hugo `type` front
+    matter value, rendering a meaningless "PAGE" badge here. Scoped it to
+    `.Section == "changelog"`. Added an eyebrow label ("A PAMPHLET FOR
+    EASTON") for this page.
+
 ### Added
 - Added `/liberty-is-not-the-price-of-safety/` (new page bundle with hero
   image) to the main nav, right after "What is Flock?"

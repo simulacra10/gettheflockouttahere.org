@@ -37,8 +37,26 @@
   .prose-site :is(h1, h2, h3, h4) {
     @apply font-sans text-ink-900;
   }
+  /* Tailwind's preflight normalizes every heading to the same size, so
+     without this h1–h4 are visually indistinguishable in body content.
+     h2 doubles as a part divider (rule above it) for long essays split
+     into major sections; h3 is a subhead within a part. */
+  .prose-site h2 {
+    @apply text-2xl sm:text-3xl mt-12 mb-3 pt-8 border-t-2 border-ink-900/10;
+  }
+  .prose-site h2:first-child {
+    @apply mt-0 pt-0 border-0;
+  }
+  .prose-site h3 {
+    @apply text-lg sm:text-xl mt-8 mb-1;
+  }
   .prose-site a {
     @apply underline decoration-accent-600/40 hover:decoration-accent-600;
+  }
+  /* Rhetorical asides set off with `>` in markdown (distinct from the
+     hero pull-quote, which is its own bespoke component below). */
+  .prose-site blockquote {
+    @apply border-l-2 border-accent-600/50 pl-4 italic text-ink-900;
   }
   /* Tailwind's preflight strips default list markers site-wide; opt back
      in here since prose content routinely has real ordered/unordered
@@ -161,5 +179,47 @@
       animation: none;
       opacity: 1;
     }
+  }
+
+  /* Long-form essay furniture: a duotoned hero portrait and a dark
+     pull-quote panel, for pieces built around a historical source rather
+     than a camera capture (the scan-panel's dark-panel language, reused
+     here in ink rather than scanner green, so the two read as siblings
+     without being identical). */
+  .page-hero {
+    @apply relative -mx-4 sm:mx-0 overflow-hidden sm:rounded-md;
+  }
+  .page-hero img {
+    @apply w-full h-[38vh] sm:h-[46vh] object-cover object-top;
+    filter: grayscale(1) contrast(1.08);
+  }
+  .hero-quote {
+    @apply relative overflow-hidden -mx-4 sm:mx-0 sm:rounded-md bg-ink-900
+           px-6 py-10 sm:px-12 sm:py-14 mt-0;
+  }
+  .hero-quote::before {
+    content: "\201C";
+    @apply absolute -top-6 left-4 sm:left-8 font-serif text-plate/10 leading-none;
+    font-size: 9rem;
+  }
+  .hero-quote p {
+    @apply relative font-serif italic text-plate text-xl sm:text-3xl leading-snug max-w-2xl;
+  }
+  .hero-quote footer {
+    @apply relative mt-5 font-mono text-xs uppercase tracking-[0.2em] text-plate/60 not-italic;
+  }
+  .hero-quote footer::before {
+    content: "\2014\00A0";
+  }
+
+  /* The page's climax gets the same dark-panel treatment as the hero
+     quote — the same visual "voice" for Franklin's historical judgment
+     and the reader's present-day ask, so the two rhyme. */
+  .proclamation {
+    @apply relative -mx-4 sm:mx-0 sm:rounded-md bg-ink-900 px-6 py-8 sm:px-10 sm:py-10
+           my-10 space-y-2 text-center;
+  }
+  .proclamation p {
+    @apply font-sans text-lg sm:text-xl font-extrabold uppercase tracking-wide text-plate;
   }
 }
