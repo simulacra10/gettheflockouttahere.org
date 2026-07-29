@@ -19,5 +19,3 @@ No. See [About](/about/).
 
 **I found an error on this site. What do I do?**
 Please report it through the [Discord](/take-action/) channel.
-Corrections to any factual claim are logged publicly in the
-[changelog](/changelog/).
