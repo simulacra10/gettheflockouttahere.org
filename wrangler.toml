@@ -20,5 +20,8 @@ name = "gettheflockouttahere"
 compatibility_date = "2026-07-30"
 pages_build_output_dir = "public"
 
-[observability]
-enabled = false
+# NOTE: [observability] is intentionally absent — Cloudflare Pages'
+# wrangler.toml validation rejects it outright ("Configuration file for
+# Pages projects does not support 'observability'"), unlike plain
+# Workers. Confirmed via a failed build log. Don't re-add it here; that
+# setting only applies to genuine Workers projects.

@@ -7,6 +7,10 @@ Format based on Keep a Changelog (keepachangelog.com).
 
 ## [2026-07-30]
 ### Fixed
+- Removed `[observability]` from `wrangler.toml` — Cloudflare Pages'
+  config validation rejects it outright (Workers-only feature), confirmed
+  via the actual failed build log through the Cloudflare Builds API.
+  Added a comment so it doesn't get re-added.
 - First live Cloudflare Pages deploy failed: `wrangler.toml`'s `name` was
   `gettheflockouttahere-org`, but the actual Pages project (created via
   the dashboard) is named `gettheflockouttahere`, no `-org`. Cloudflare
