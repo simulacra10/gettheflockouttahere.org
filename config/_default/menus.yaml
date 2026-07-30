@@ -8,18 +8,21 @@ main:
   - name: "The Ordinance"
     pageRef: "/the-ordinance/"
     weight: 30
+  - name: "Consent Withdrawn"
+    pageRef: "/consent-withdrawn/"
+    weight: 40
   - name: "Take Action"
     pageRef: "/take-action/"
-    weight: 40
+    weight: 50
   - name: "FAQ"
     pageRef: "/faq/"
-    weight: 50
+    weight: 60
   - name: "Updates"
     pageRef: "/updates/"
-    weight: 60
+    weight: 70
   - name: "About"
     pageRef: "/about/"
-    weight: 70
+    weight: 80
 
 footer:
   - name: "About"

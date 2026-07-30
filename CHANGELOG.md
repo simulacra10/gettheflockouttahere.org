@@ -6,6 +6,13 @@ Format based on Keep a Changelog (keepachangelog.com).
 ## [Unreleased]
 
 ## [2026-07-30]
+### Added
+- Added `/consent-withdrawn/` (Declaration-of-Independence-framed essay on
+  consent of the governed) to nav, after The Ordinance. Caught and fixed
+  the same missing-`layout: single` bug documented in `ARCHITECTURE.md`
+  § 5 before it shipped — checked for it this time instead of finding out
+  after the fact.
+
 ### Removed
 - Removed the public `/changelog/` feature entirely: it was a
   misinterpretation of what this site needed — meant to be dev/engineering
