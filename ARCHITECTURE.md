@@ -29,8 +29,8 @@ content model, and deployment pipeline.
 |---|---|
 | Static site generator | Hugo (extended) |
 | CSS | Tailwind CSS, compiled via CLI as a pre-build step |
-| Hosting | Cloudflare Pages, deployed from Git |
-| DNS | Cloudflare (same account as Pages project) |
+| Hosting | Cloudflare Workers (static assets), deployed from Git |
+| DNS | Cloudflare (same account) |
 | Version control | Git (GitHub) |
 | Forms / backend | None. Community coordination happens off-site (Discord) |
 
@@ -184,42 +184,24 @@ npm install && npm run build:css && hugo --gc --minify
 
 Output directory: `public`.
 
-## 9. Deployment (Cloudflare Pages)
+## 9. Deployment (Cloudflare Workers, static assets)
+
+The site deploys as a Cloudflare Worker serving static assets (Hugo's
+build output) — not a Cloudflare Pages project; none exists on this
+account. `wrangler.toml` (repo root) sets `[assets] directory = "public"`
+and is what Cloudflare's Git-integration build uses to deploy on every
+push to `main`.
 
 | Setting | Value |
 |---|---|
-| Build command | `npm install && npm run build:css && hugo --gc --minify` |
-| Build output directory | `public` |
+| Build command | `npm run build:css && hugo --gc --minify` |
+| Deploy command | `npx wrangler deploy` |
 | Root directory | `/` |
-| Environment variable | `HUGO_VERSION` pinned to extended edition |
-| Environment variable | `NODE_VERSION` pinned to match local dev |
 | Production branch | `main` |
-| Preview deployments | Automatic on every PR branch |
 | Custom domains | `gettheflockouttahere.org` (primary), `deflockeaston.org` (secondary) |
 
-Both domains are attached to the same Cloudflare Pages project, with
-`gettheflockouttahere.org` set as the primary domain — Cloudflare Pages
-automatically 301-redirects the secondary domain to it. `baseURL` and all
-canonical/OG URLs in the site config point at the primary domain.
-
-Two ways to ship a build, both valid:
-
-1. **Git integration** (dashboard-configured): the settings table above,
-   connected to this repo. Cloudflare runs the build itself on every push
-   and gets automatic preview deployments per PR branch for free.
-2. **`wrangler.toml`** (repo root): either run `wrangler pages deploy
-   public` yourself after building, or — what actually happens here, since
-   the repo is *also* connected via Git integration — Cloudflare Pages'
-   own build system detects `wrangler.toml`'s `pages_build_output_dir` and
-   runs `wrangler pages deploy public` as its own deploy step, inside the
-   build. That inner `wrangler` call needs a `CLOUDFLARE_API_TOKEN`
-   environment variable set in the Pages project's build settings, with
-   the **Cloudflare Pages: Edit** permission — without it, or if `name` in
-   `wrangler.toml` doesn't exactly match the existing Pages project name,
-   the deploy fails with a misleading `Authentication error [code:
-   10000]` that looks like a token problem but usually isn't one. Project
-   name: `gettheflockouttahere` (**no** `-org` suffix — check this first
-   if a deploy fails with that error).
+`baseURL` and all canonical/OG URLs in the site config point at the
+primary domain.
 
 `static/_headers` (must live under `static/`, not the repo root — Hugo
 only copies `static/*` into the build output):

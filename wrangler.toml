@@ -1,27 +1,18 @@
-# Cloudflare Pages deployment config for gettheflockouttahere.org.
+# Deployment config for gettheflockouttahere.org — a Cloudflare Worker
+# serving static assets (Hugo's build output), not a Cloudflare Pages
+# project. No Pages project exists on this account; this repo's Git
+# integration is connected to a Worker, and `wrangler pages deploy`
+# does not apply here.
 #
 # Build first, then ship the static output:
 #   npm install && npm run build:css && hugo --gc --minify
-#   wrangler pages deploy public
-#
-# This isn't the only way to deploy: connecting this repo directly in the
-# Cloudflare Pages dashboard (Git integration) works too, using the same
-# build command and output directory below, and gets automatic preview
-# deployments per PR branch for free. See ARCHITECTURE.md section 8.
-# wrangler.toml exists for CLI/CI-driven deploys (e.g. from GitHub
-# Actions) as an alternative to Cloudflare's own build step.
-#
-# `name` must exactly match the existing Cloudflare Pages project name
-# (dashboard: Workers & Pages) — a mismatch here is what the confusing
-# "Authentication error [code: 10000]" from `wrangler pages deploy`
-# usually actually means, not a real auth/token problem.
+#   npx wrangler deploy
 
 name = "gettheflockouttahere"
 compatibility_date = "2026-07-30"
-pages_build_output_dir = "public"
 
-# NOTE: [observability] is intentionally absent — Cloudflare Pages'
-# wrangler.toml validation rejects it outright ("Configuration file for
-# Pages projects does not support 'observability'"), unlike plain
-# Workers. Confirmed via a failed build log. Don't re-add it here; that
-# setting only applies to genuine Workers projects.
+[assets]
+directory = "public"
+
+# [observability] is intentionally absent for now — revisit if useful,
+# but it isn't required for a static-assets-only Worker with no script.
