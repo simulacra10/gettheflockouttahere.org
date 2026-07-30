@@ -1,0 +1,11 @@
+{{ .Title }}
+{{ with .Params.description }}{{ . }}{{ end }}
+
+{{ .Plain | htmlUnescape }}
+{{ if not .IsHome }}
+{{ range .Pages }}
+{{ .Title }}
+{{ .Permalink }}
+
+{{ end }}
+{{ end }}

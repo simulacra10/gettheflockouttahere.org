@@ -11,8 +11,7 @@ _build:
 
 _This section tracks confirmed facts about Flock Safety cameras in Easton
 and any council action toward removal. Update this page as facts are
-confirmed, and log any correction to a previously stated fact in the
-[changelog](/changelog/) rather than silently editing it away._
+confirmed._
 
 - **Cameras installed:** Two Flock Safety ALPR cameras are already in place
   in Easton. Exact locations, install date, and contract terms still need

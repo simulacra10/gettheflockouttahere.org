@@ -3,13 +3,14 @@
     <a href="{{ .Site.Home.RelPermalink }}" class="no-underline text-ink-900 font-sans font-extrabold text-lg tracking-tight">
       {{ .Site.Title }}
     </a>
-    <ul class="flex flex-wrap gap-x-5 gap-y-2">
-      {{ range .Site.Menus.main }}
+    <ul class="flex flex-wrap items-center gap-x-3 gap-y-2">
+      {{ range $index, $item := .Site.Menus.main }}
+      {{ if gt $index 0 }}<li class="font-mono text-xs text-ink-500" aria-hidden="true">|</li>{{ end }}
       <li>
         <a
-          href="{{ .URL | relLangURL }}"
-          class="no-underline font-mono text-xs uppercase tracking-wide pb-1 border-b-2 {{ if $.IsMenuCurrent "main" . }}border-accent-600 text-ink-900 font-semibold{{ else }}border-transparent text-ink-700 hover:text-accent-600 hover:border-accent-600/40{{ end }}"
-        >{{ .Name }}</a>
+          href="{{ $item.URL | relLangURL }}"
+          class="no-underline font-mono text-xs uppercase tracking-wide pb-1 border-b-2 {{ if $.IsMenuCurrent "main" $item }}border-accent-600 text-ink-900 font-semibold{{ else }}border-transparent text-ink-700 hover:text-accent-600 hover:border-accent-600/40{{ end }}"
+        >{{ $item.Name }}</a>
       </li>
       {{ end }}
     </ul>

@@ -107,22 +107,6 @@
            no-underline hover:bg-ink-900 hover:text-plate transition-colors;
   }
 
-  /* Changelog / update badges: a ticket-stub look (mono, dashed divider)
-     rather than a generic pill, color-mapped to what the label means. */
-  .badge {
-    @apply inline-flex items-center gap-1.5 border-l-2 border-dashed pl-2 pr-2.5 py-0.5
-           font-mono text-[0.7rem] font-semibold uppercase tracking-widest;
-  }
-  .badge-correction {
-    @apply border-accent-600 text-accent-600 bg-accent-600/5;
-  }
-  .badge-update {
-    @apply border-citation text-citation bg-citation/10;
-  }
-  .badge-addition {
-    @apply border-scanner text-scanner bg-scanner-light;
-  }
-
   /* Signature element: the capture panel. A dark CRT-style readout showing
      exactly what an ALPR camera logs per vehicle, per pass. */
   .scan-panel {

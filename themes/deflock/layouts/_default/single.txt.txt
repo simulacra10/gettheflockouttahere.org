@@ -1,0 +1,6 @@
+{{ .Title }}
+{{ with .Params.description }}{{ . }}{{ end }}
+
+{{/* .Plain strips HTML tags but leaves entities like &rsquo; from
+     Goldmark's typographer extension (smart quotes) undecoded. */}}
+{{ .Plain | htmlUnescape }}

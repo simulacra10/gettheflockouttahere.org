@@ -5,6 +5,53 @@ Format based on Keep a Changelog (keepachangelog.com).
 
 ## [Unreleased]
 
+## [2026-07-30]
+### Removed
+- Removed the public `/changelog/` feature entirely: it was a
+  misinterpretation of what this site needed — meant to be dev/engineering
+  only (this file), never a public content section. Deleted
+  `content/changelog/`, the `changelog-entry` archetype, the changelog
+  branch in `list.html`, the now-dead type-badge logic and CSS
+  (`badge`/`badge-correction`/`badge-update`/`badge-addition`) in
+  `single.html`/`main.css`, and the `permalinks.changelog` entry in
+  `hugo.yaml`. `ARCHITECTURE.md` § 10 rewritten to document this decision
+  so it doesn't get reintroduced by accident.
+
+### Fixed
+- `_headers` and `_redirects` lived at the repo root, but Hugo only copies
+  `static/*` into the build output — they were never actually reaching
+  `public/`, so none of the security headers or redirects were live on
+  any deployment, ever. Moved both into `static/`. Confirmed they now
+  appear in `public/` after a build.
+
+### Added
+- Added `wrangler.toml` for Cloudflare Pages deployment via the Wrangler
+  CLI (`wrangler pages deploy public`), as an alternative to the
+  dashboard-configured Git integration documented in `ARCHITECTURE.md`
+  § 9 — both are now documented there.
+- Added `/the-ordinance/` (draft ALPR ban ordinance text, plus PDF/ODT
+  downloads) and added it to the nav after Liberty. Its `_index.md`
+  originally lacked `layout: single`, so it silently rendered through
+  `list.html`'s generic fallback (no eyebrow, wrong heading scale) instead
+  of `single.html` — same class of bug as any top-level article page
+  missing that front matter field; documented in `ARCHITECTURE.md` § 5 so
+  it's checked first next time a new page looks slightly off. Deleted a
+  stray `.org` source file that Hugo had auto-published as a garbled
+  duplicate page (Hugo treats `.org` as a content format).
+- Enabled a plain-text (`.txt`) rendition of every page site-wide: new
+  `TXT` output format (`config/_default/hugo.yaml`), rendered by
+  `single.txt.txt` / `list.txt.txt` using `.Plain | htmlUnescape` (the
+  `htmlUnescape` matters — `.Plain` leaves Goldmark's smart-quote HTML
+  entities undecoded otherwise). Linked as "TXT ↗" next to each page's
+  other metadata/options in the header, not as a separate bottom link.
+- Nav now uses literal `|` separators between items
+  (`themes/deflock/layouts/partials/nav.html`).
+- Fixed a real Discord invite mismatch: `params.yaml` had
+  `discord.gg/qvJ8Mja4z`, a site-launch update post hardcoded a different
+  `discord.gg/8ZKSaGc4B`. Confirmed the latter is correct; updated
+  `params.yaml` and switched the update post to the `community-link`
+  shortcode instead of a hardcoded URL, so there's one source of truth.
+
 ## [2026-07-29]
 ### Added
 - Added `LICENSE` (MIT) at the repo root. Footer now links to it and to

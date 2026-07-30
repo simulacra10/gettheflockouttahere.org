@@ -1,7 +1,7 @@
 # gettheflockouttahere.org — Site Architecture Document
 
 **Status:** Draft v0.1
-**Last updated:** 2026-07-28
+**Last updated:** 2026-07-30
 **Maintainer:** (fill in)
 
 ## 1. Purpose and scope
@@ -13,9 +13,8 @@ explain the technology, document local government action, and direct
 visitors to community channels for organizing toward removal and a local
 ban ordinance.
 
-This document describes the technical architecture: stack, repo layout, content
-model, deployment pipeline, and the changelog system used to track both site
-changes and factual corrections to published content.
+This document describes the technical architecture: stack, repo layout,
+content model, and deployment pipeline.
 
 ## 2. Goals and constraints
 
@@ -23,8 +22,6 @@ changes and factual corrections to published content.
 - Fast, accessible, low-JS. Content and sourcing matter more than interactivity.
 - Every factual claim (camera counts, timelines, quotes) traceable to a source.
 - Easy for non-developers to review proposed content changes via pull request.
-- Transparent about corrections, since credibility is the core asset of an
-  advocacy site on a factual/legal topic.
 
 ## 3. Tech stack
 
@@ -45,14 +42,18 @@ deflockeaston/
 │   ├── _index.md
 │   ├── what-is-flock/_index.md
 │   ├── local-status/_index.md   # disabled: `_build: {render: false, list: false}`
+│   ├── liberty-is-not-the-price-of-safety/
+│   │   ├── _index.md
+│   │   └── benjamin-franklin-liberty.jpg
+│   ├── the-ordinance/
+│   │   ├── _index.md
+│   │   ├── easton-alpr-ban-ordinance.pdf
+│   │   └── easton-alpr-ban-ordinance.odt
 │   ├── take-action/_index.md
 │   ├── faq/_index.md
 │   ├── updates/
 │   │   ├── _index.md
 │   │   └── <slug>/index.md
-│   ├── changelog/
-│   │   ├── _index.md
-│   │   └── <date>-<slug>.md
 │   └── about/_index.md
 ├── data/
 │   └── council.yaml
@@ -60,13 +61,14 @@ deflockeaston/
 │   └── deflock/                 # all visual/presentational elements live here
 │       ├── theme.toml
 │       ├── archetypes/
-│       │   ├── updates.md
-│       │   └── changelog-entry.md
+│       │   └── updates.md
 │       ├── layouts/
 │       │   ├── _default/
 │       │   │   ├── baseof.html
 │       │   │   ├── single.html
-│       │   │   └── list.html
+│       │   │   ├── single.txt.txt   # plain-text rendition, all pages
+│       │   │   ├── list.html
+│       │   │   └── list.txt.txt
 │       │   ├── partials/
 │       │   │   ├── head.html
 │       │   │   ├── nav.html
@@ -82,15 +84,16 @@ deflockeaston/
 ├── static/
 │   ├── favicon.ico
 │   ├── robots.txt
-│   └── images/
+│   ├── images/
+│   ├── _headers                 # must live under static/ — Hugo only
+│   └── _redirects               # copies static/*, not the repo root
 ├── config/
 │   └── _default/
 │       ├── hugo.yaml            # sets `theme: deflock`
 │       ├── menus.yaml
 │       └── params.yaml
 ├── package.json
-├── _headers
-├── _redirects
+├── wrangler.toml
 └── CHANGELOG.md
 ```
 
@@ -103,22 +106,66 @@ only for this site and isn't published separately.
 ## 5. Content architecture
 
 ```
-/                  Home: the issue, the ask, the stakes
-/what-is-flock/    Explainer: ALPR, what cameras capture, how data flows
-/take-action/      Discord link, contact templates, meeting schedule
+/                              Home: the issue, the ask, the stakes
+/what-is-flock/                Explainer: ALPR, what cameras capture, how data flows
+/liberty-is-not-the-price-of-safety/  Franklin-quote essay, the campaign's manifesto
+/the-ordinance/                Draft ban ordinance text, plus PDF/ODT downloads
+/take-action/                  Discord link, contact templates, meeting schedule
 /faq/
-/updates/          Dated posts: council meetings, records requests, news
+/updates/                      Dated posts: council meetings, records requests, news
 /updates/<slug>/
-/changelog/        Public log of corrections and material updates to the site
 /about/
 ```
+
+Every top-level article page (`what-is-flock`, `liberty-is-not-the-price-of-safety`,
+`the-ordinance`, `take-action`, `faq`, `about`) is a **branch bundle**
+(`_index.md`, defining its own section) and **must set `layout: single`**
+in front matter, or Hugo silently renders it through `_default/list.html`'s
+generic fallback instead — it still builds, still looks plausible, but
+loses the eyebrow label, the correct heading scale, and the plain-text
+link. This exact bug shipped on `the-ordinance` (front matter had every
+other field except `layout: single`) before being caught by a rendering
+diff against a known-good page. If a new top-level page looks slightly
+off — no eyebrow, no `sm:` heading breakpoint — check this first.
+
+A page bundle can carry real downloadable files alongside its `_index.md`
+(see `the-ordinance/`) — Hugo publishes any non-content file sitting next
+to it automatically, no template wiring required. Link to them with a
+plain relative markdown link matching the filename
+(`[PDF](easton-alpr-ban-ordinance.pdf)`). Files with a Hugo-recognized
+content extension (`.md`, `.org`, ...) are the exception: those get
+parsed as their own content page instead of published as a static
+resource, which is almost never what you want for a source/working file —
+keep drafts in `.org`/`.odt` out of `content/` entirely (see `drafts/` at
+the repo root), and only keep the final artifact once it needs to be a
+public download.
 
 ## 6. Data files
 
 `data/council.yaml` holds current elected officials and contact info for
 `/take-action/`, rendered via the `council-table` shortcode.
 
-## 7. Theming
+## 7. Plain-text output
+
+Every page also renders a plain-text version alongside its HTML, linked
+automatically ("Plain text version ↗") wherever the page itself renders —
+`single.html` and `list.html` each check `.OutputFormats.Get "txt"` and
+print the link only when it exists, so nothing needs wiring per-page.
+
+- `config/_default/hugo.yaml` defines the `TXT` output format
+  (`text/plain`, `baseName: index` → `index.txt`) and enables it for the
+  `home`, `section`, and `page` Hugo kinds — i.e. everywhere.
+- `themes/deflock/layouts/_default/single.txt.txt` and `list.txt.txt`
+  render it: title, description, then `.Plain` (Hugo's tags-stripped
+  rendition of the content) piped through `htmlUnescape`. That last part
+  matters — `.Plain` strips HTML *tags* but leaves entities like `&rsquo;`
+  from Goldmark's typographer extension (smart quotes) undecoded; without
+  `htmlUnescape` the plain-text output has literal `&rsquo;` in it instead
+  of `’`.
+- `list.txt.txt` also enumerates child pages (title + permalink) for
+  section-listing pages, skipped on the home page.
+
+## 8. Theming
 
 Custom, minimal Tailwind-based theme, packaged as a local Hugo theme at
 `themes/deflock/` and activated via `theme: deflock` in
@@ -137,7 +184,7 @@ npm install && npm run build:css && hugo --gc --minify
 
 Output directory: `public`.
 
-## 8. Deployment (Cloudflare Pages)
+## 9. Deployment (Cloudflare Pages)
 
 | Setting | Value |
 |---|---|
@@ -155,7 +202,19 @@ Both domains are attached to the same Cloudflare Pages project, with
 automatically 301-redirects the secondary domain to it. `baseURL` and all
 canonical/OG URLs in the site config point at the primary domain.
 
-`_headers`:
+Two ways to ship a build, both valid:
+
+1. **Git integration** (dashboard-configured): the settings table above,
+   connected to this repo. Cloudflare runs the build itself on every push
+   and gets automatic preview deployments per PR branch for free.
+2. **`wrangler.toml`** (repo root): build locally or in CI, then
+   `wrangler pages deploy public`. Useful if the build should happen
+   somewhere already set up for it (e.g. the GitHub Actions workflow used
+   for the GitHub Pages preview) rather than inside Cloudflare's own build
+   step. Project name `gettheflockouttahere-org`.
+
+`static/_headers` (must live under `static/`, not the repo root — Hugo
+only copies `static/*` into the build output):
 ```
 /*
   X-Frame-Options: DENY
@@ -164,16 +223,12 @@ canonical/OG URLs in the site config point at the primary domain.
   Permissions-Policy: geolocation=(), camera=(), microphone=()
 ```
 
-## 9. Changelog specification
+## 10. Changelog specification
 
-The site uses two separate changelogs, serving different audiences. Do not
-merge them.
-
-### 9.1 Repository changelog (`CHANGELOG.md`)
-
-Tracks the codebase and site mechanics: builds, layouts, dependencies,
-deployment config. Follows the Keep a Changelog format, versioned by date
-since this project doesn't ship discrete numbered releases.
+`CHANGELOG.md` at the repo root is engineering-only: builds, layouts,
+dependencies, config, deployment. Follows the Keep a Changelog format,
+versioned by date since this project doesn't ship discrete numbered
+releases.
 
 Format:
 
@@ -206,59 +261,16 @@ Rules:
 - Dated entries, not semantic version numbers, since the site has no versioned
   releases in the software sense.
 
-### 9.2 Public changelog (`/changelog/`)
+**There is no public-facing `/changelog/`.** An earlier draft of this site
+had one — a visible correction log for published claims (cost figures,
+legal citations, timeline facts). That was a misreading of what this site
+needed: it was never meant to store public content, only to track
+engineering changes. It has been removed (content, archetype, list-view
+template branch, badge styling, permalink config). Don't reintroduce a
+public changelog section without checking with the maintainer first — if
+a published claim needs correcting, just correct it.
 
-A visible page on the site itself, distinct from the repo changelog. Tracks
-corrections and material updates to published claims: cost figures, legal
-citations, timeline facts, and any retraction. This exists because credibility
-is the core asset of the site, and a visible, dated correction record heads
-off "they just quietly changed the numbers" accusations.
-
-Content model: one entry per correction/update, front matter driven so entries
-can be listed and filtered.
-
-`content/changelog/_index.md` front matter per entry (as a page bundle or
-inline list, contributor's choice):
-
-```yaml
-date: 2026-07-27
-title: "Corrected annual subscription estimate on /costs/"
-type: correction   # correction | update | addition
-summary: >
-  The per-camera annual subscription figure was updated from $2,500 to
-  $3,000 based on a public records response received 2026-07-24. The prior
-  figure was estimated from a comparable jurisdiction's published contract.
-affected_page: "/costs/"
-source_url: "https://example.gov/records-response.pdf"
-```
-
-Rules:
-- Anything that changes a number, a legal citation, a quote, or a factual claim
-  after initial publication gets an entry here, no exceptions.
-- Typo fixes, styling changes, and navigation changes do not go here; they go
-  in `CHANGELOG.md` if they touch the repo at all.
-- Each entry states what changed, why, and links the source that prompted the
-  change. No entry states only "updated costs page."
-- Entries are never deleted. If a correction is itself later found wrong, add
-  a new entry rather than editing history.
-- `/changelog/` isn't in the global nav or footer, but stays linked in-line
-  from the pages that reference it (home, About) — reachable, not
-  advertised as chrome.
-
-### 9.3 Relationship between the two
-
-| | Repo CHANGELOG.md | Public /changelog/ |
-|---|---|---|
-| Audience | Developers/contributors | General public |
-| Tracks | Code, layout, config, deploy | Factual corrections, sourced updates |
-| Location | Repo root | Live site page |
-| Trigger | Any merged PR touching site mechanics | Any change to a published factual claim |
-| Format | Keep a Changelog, dated | Structured entries with source links |
-
-A single PR can require entries in both files if it, for example, both fixes a
-shortcode bug and corrects a figure that was wrong because of that bug.
-
-## 10. Open items
+## 11. Open items
 
 - Draft Discord house rules before publishing the invite link on
   `/take-action/`, given the topic is likely to attract bad-faith joiners.

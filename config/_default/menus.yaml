@@ -5,18 +5,21 @@ main:
   - name: "Liberty Is Not the Price of Safety"
     pageRef: "/liberty-is-not-the-price-of-safety/"
     weight: 20
+  - name: "The Ordinance"
+    pageRef: "/the-ordinance/"
+    weight: 30
   - name: "Take Action"
     pageRef: "/take-action/"
-    weight: 30
+    weight: 40
   - name: "FAQ"
     pageRef: "/faq/"
-    weight: 40
+    weight: 50
   - name: "Updates"
     pageRef: "/updates/"
-    weight: 50
+    weight: 60
   - name: "About"
     pageRef: "/about/"
-    weight: 60
+    weight: 70
 
 footer:
   - name: "About"

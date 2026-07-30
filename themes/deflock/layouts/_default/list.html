@@ -16,6 +16,9 @@
     {{ with .Params.subhead }}
     <p class="font-serif text-lg text-ink-700 mt-4 max-w-2xl mx-auto">{{ . }}</p>
     {{ end }}
+    {{ with .OutputFormats.Get "txt" }}
+    <a href="{{ .Permalink }}" class="inline-block mt-3 font-mono text-xs text-ink-500 hover:text-accent-600">TXT ↗</a>
+    {{ end }}
   </section>
 
   {{/* Illustrative only — not a claimed screenshot or verified field list
@@ -52,33 +55,12 @@
     </p>
   </section>
 
-{{ else if eq .Section "changelog" }}
-
-  <header class="mb-8 max-w-3xl mx-auto">
-    <p class="eyebrow mb-2">Correction log</p>
-    <h1 class="text-3xl">{{ .Title }}</h1>
-    <div class="prose-site !mx-0 mt-3">{{ .Content }}</div>
-  </header>
-  <ol class="space-y-6 max-w-3xl mx-auto">
-    {{ range .Pages.ByDate.Reverse }}
-    <li class="border-l-2 border-ink-900/10 pl-5">
-      <span class="badge badge-{{ .Params.type | default "update" }}">{{ .Params.type | default "update" }}</span>
-      <p class="font-mono text-xs text-ink-500 mt-2">{{ .Date.Format "2006-01-02" }}</p>
-      <h2 class="text-lg mt-1"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-      {{ with .Params.summary }}<p class="mt-1 text-ink-700 font-serif">{{ . }}</p>{{ end }}
-      <p class="text-sm mt-2 space-x-3">
-        {{ with .Params.affected_page }}<span class="text-ink-500">Affects: <code>{{ . }}</code></span>{{ end }}
-        {{ with .Params.source_url }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Source ↗</a>{{ end }}
-      </p>
-    </li>
-    {{ end }}
-  </ol>
-
 {{ else if eq .Section "updates" }}
 
   <header class="mb-8 max-w-3xl mx-auto">
     <p class="eyebrow mb-2">Field log</p>
     <h1 class="text-3xl">{{ .Title }}</h1>
+    {{ with .OutputFormats.Get "txt" }}<a href="{{ .Permalink }}" class="inline-block mt-1 font-mono text-xs text-ink-500 hover:text-accent-600">TXT ↗</a>{{ end }}
     <div class="prose-site !mx-0 mt-3">{{ .Content }}</div>
   </header>
   <ol class="space-y-6 max-w-3xl mx-auto">
@@ -95,6 +77,7 @@
 
   <header class="mb-8 max-w-3xl mx-auto">
     <h1 class="text-3xl">{{ .Title }}</h1>
+    {{ with .OutputFormats.Get "txt" }}<a href="{{ .Permalink }}" class="inline-block mt-1 font-mono text-xs text-ink-500 hover:text-accent-600">TXT ↗</a>{{ end }}
     <div class="prose-site !mx-0 mt-3">{{ .Content }}</div>
   </header>
   <ul class="space-y-4 max-w-3xl mx-auto">

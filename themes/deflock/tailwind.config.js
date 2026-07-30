@@ -48,8 +48,7 @@ module.exports = {
         // Long-form reading face for prose paragraphs: a plain, credible
         // serif stack with zero extra network cost.
         serif: ["Iowan Old Style", "Palatino Linotype", "Georgia", "Cambria", "serif"],
-        // Data/technical face: timestamps, plate reads, citation numbers,
-        // changelog dates.
+        // Data/technical face: timestamps, plate reads, update-post dates.
         mono: ["\"Overpass Mono\"", "ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
       },
     },

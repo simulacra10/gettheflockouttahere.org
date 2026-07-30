@@ -1,7 +1,7 @@
 name = "deflock"
 license = "MIT"
-description = "Minimal advocacy-site theme for deflockeaston.org: Tailwind-based, low-JS, built around a public changelog for factual corrections."
-homepage = "https://deflockeaston.org/"
+description = "Minimal advocacy-site theme for gettheflockouttahere.org: Tailwind-based, low-JS, evidence-dossier design system."
+homepage = "https://gettheflockouttahere.org/"
 min_version = "0.123.0"
 
 [author]

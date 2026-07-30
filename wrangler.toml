@@ -1,0 +1,16 @@
+# Cloudflare Pages deployment config for gettheflockouttahere.org.
+#
+# Build first, then ship the static output:
+#   npm install && npm run build:css && hugo --gc --minify
+#   wrangler pages deploy public
+#
+# This isn't the only way to deploy: connecting this repo directly in the
+# Cloudflare Pages dashboard (Git integration) works too, using the same
+# build command and output directory below, and gets automatic preview
+# deployments per PR branch for free. See ARCHITECTURE.md section 8.
+# wrangler.toml exists for CLI/CI-driven deploys (e.g. from GitHub
+# Actions) as an alternative to Cloudflare's own build step.
+
+name = "gettheflockouttahere-org"
+compatibility_date = "2026-07-30"
+pages_build_output_dir = "public"
