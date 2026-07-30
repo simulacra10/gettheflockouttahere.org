@@ -207,11 +207,19 @@ Two ways to ship a build, both valid:
 1. **Git integration** (dashboard-configured): the settings table above,
    connected to this repo. Cloudflare runs the build itself on every push
    and gets automatic preview deployments per PR branch for free.
-2. **`wrangler.toml`** (repo root): build locally or in CI, then
-   `wrangler pages deploy public`. Useful if the build should happen
-   somewhere already set up for it (e.g. the GitHub Actions workflow used
-   for the GitHub Pages preview) rather than inside Cloudflare's own build
-   step. Project name `gettheflockouttahere-org`.
+2. **`wrangler.toml`** (repo root): either run `wrangler pages deploy
+   public` yourself after building, or — what actually happens here, since
+   the repo is *also* connected via Git integration — Cloudflare Pages'
+   own build system detects `wrangler.toml`'s `pages_build_output_dir` and
+   runs `wrangler pages deploy public` as its own deploy step, inside the
+   build. That inner `wrangler` call needs a `CLOUDFLARE_API_TOKEN`
+   environment variable set in the Pages project's build settings, with
+   the **Cloudflare Pages: Edit** permission — without it, or if `name` in
+   `wrangler.toml` doesn't exactly match the existing Pages project name,
+   the deploy fails with a misleading `Authentication error [code:
+   10000]` that looks like a token problem but usually isn't one. Project
+   name: `gettheflockouttahere` (**no** `-org` suffix — check this first
+   if a deploy fails with that error).
 
 `static/_headers` (must live under `static/`, not the repo root — Hugo
 only copies `static/*` into the build output):

@@ -10,7 +10,12 @@
 # deployments per PR branch for free. See ARCHITECTURE.md section 8.
 # wrangler.toml exists for CLI/CI-driven deploys (e.g. from GitHub
 # Actions) as an alternative to Cloudflare's own build step.
+#
+# `name` must exactly match the existing Cloudflare Pages project name
+# (dashboard: Workers & Pages) — a mismatch here is what the confusing
+# "Authentication error [code: 10000]" from `wrangler pages deploy`
+# usually actually means, not a real auth/token problem.
 
-name = "gettheflockouttahere-org"
+name = "gettheflockouttahere"
 compatibility_date = "2026-07-30"
 pages_build_output_dir = "public"
