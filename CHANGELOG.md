@@ -7,6 +7,12 @@ Format based on Keep a Changelog (keepachangelog.com).
 
 ## [2026-07-30]
 ### Fixed
+- `.txt` pages served without a charset in `Content-Type`, so browsers
+  guessed Latin-1 and displayed smart quotes/em dashes as mojibake — the
+  underlying file bytes were correct UTF-8 the whole time. Added a
+  `/*.txt` rule to `static/_headers` forcing `charset=utf-8`.
+
+### Fixed
 - Fixed `wrangler.toml` for Cloudflare Pages deployment (corrected the
   project name, removed an unsupported config key). See `ARCHITECTURE.md`
   § 9 for deployment configuration notes.

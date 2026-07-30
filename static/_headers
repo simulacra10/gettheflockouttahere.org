@@ -3,3 +3,10 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), camera=(), microphone=()
+
+# Hugo's .txt output is UTF-8, but the default served Content-Type has no
+# charset — browsers then guess Latin-1/Windows-1252 and mangle smart
+# quotes/em dashes into mojibake (e.g. "company’s" -> "companyâ€™s"),
+# even though the underlying file bytes are correct UTF-8 the whole time.
+/*.txt
+  Content-Type: text/plain; charset=utf-8
