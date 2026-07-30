@@ -6,6 +6,10 @@ Format based on Keep a Changelog (keepachangelog.com).
 ## [Unreleased]
 
 ## [2026-07-30]
+### Changed
+- Removed the "What gets logged · no warrant required" eyebrow from the
+  home page hero.
+
 ### Fixed
 - `.txt` pages served without a charset in `Content-Type`, so browsers
   guessed Latin-1 and displayed smart quotes/em dashes as mojibake — the
