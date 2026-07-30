@@ -7,18 +7,9 @@ Format based on Keep a Changelog (keepachangelog.com).
 
 ## [2026-07-30]
 ### Fixed
-- Removed `[observability]` from `wrangler.toml` — Cloudflare Pages'
-  config validation rejects it outright (Workers-only feature), confirmed
-  via the actual failed build log through the Cloudflare Builds API.
-  Added a comment so it doesn't get re-added.
-- First live Cloudflare Pages deploy failed: `wrangler.toml`'s `name` was
-  `gettheflockouttahere-org`, but the actual Pages project (created via
-  the dashboard) is named `gettheflockouttahere`, no `-org`. Cloudflare
-  Pages auto-detects `wrangler.toml` and runs `wrangler pages deploy`
-  itself as the build's deploy step; a project-name mismatch there
-  surfaces as a misleading `Authentication error [code: 10000]` that
-  looks like a token/permission problem rather than a wrong name. Fixed
-  the name and documented the failure mode in `ARCHITECTURE.md` § 9.
+- Fixed `wrangler.toml` for Cloudflare Pages deployment (corrected the
+  project name, removed an unsupported config key). See `ARCHITECTURE.md`
+  § 9 for deployment configuration notes.
 
 ### Added
 - Added `/consent-withdrawn/` (Declaration-of-Independence-framed essay on
