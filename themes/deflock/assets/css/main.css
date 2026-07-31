@@ -50,7 +50,11 @@
   .prose-site h3 {
     @apply text-lg sm:text-xl mt-8 mb-1;
   }
-  .prose-site a {
+  /* :not() the buttons — otherwise this (higher-specificity than
+     .btn-primary/.btn-secondary's own no-underline) wins and underlines
+     them. Invisible on the red primary button (white-on-red), but showed
+     up plainly on the light secondary button. */
+  .prose-site a:not(.btn-primary):not(.btn-secondary) {
     @apply underline decoration-accent-600/40 hover:decoration-accent-600;
   }
   /* Rhetorical asides set off with `>` in markdown (distinct from the

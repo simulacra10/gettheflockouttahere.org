@@ -41,17 +41,21 @@
       <div class="scan-line"><dt class="scan-label">RETENTION</dt><dd class="scan-value">[SET BY CONTRACT]</dd></div>
     </dl>
     <p class="scan-caption">
-      Illustrative, not a screenshot of Flock's software. 
+      Illustrative, not a screenshot of Flock's software.
     </p>
+  </div>
+
+  <div class="flex flex-wrap items-center justify-center gap-3 mt-8">
+    <a href="{{ "/take-action/" | relURL }}" class="btn-primary">
+      Take action
+    </a>
+    <a href="{{ site.Params.organizing.discord_url }}" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+      Join the Discord
+    </a>
   </div>
 
   <section class="prose-site mt-10">
     {{ .Content }}
-    <p class="not-italic">
-      <a href="{{ "/take-action/" | relURL }}" class="btn-primary">
-        Take action
-      </a>
-    </p>
   </section>
 
 {{ else if eq .Section "updates" }}

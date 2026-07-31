@@ -6,6 +6,19 @@ Format based on Keep a Changelog (keepachangelog.com).
 ## [Unreleased]
 
 ## [2026-07-30]
+### Added
+- Added a secondary "Join the Discord" button beside the home page's
+  "Take action" CTA, moved up to sit right below the hero/scan-panel
+  (previously the CTA sat at the very bottom of the page, after all body
+  copy and the news list).
+
+### Fixed
+- `.prose-site a`'s underline styling had higher CSS specificity than
+  `.btn-primary`/`.btn-secondary`'s own `no-underline`, so both buttons
+  were getting underlined text — invisible on the red primary button
+  (white-on-red) but visible on the light secondary button. Excluded
+  both button classes from the prose link-underline rule.
+
 ### Changed
 - Removed the "What gets logged · no warrant required" eyebrow from the
   home page hero.
