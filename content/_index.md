@@ -19,6 +19,8 @@ If you oppose mass surveillance in Easton, contact the mayor and Town Council, a
 
 ## In the news
 
+[In one California town, Flock misread license plates in 71% of the alerts it sent to police](https://www.businessinsider.com/flock-camera-misread-license-plate-reader-california-roseville-police-2026-7) — Business Insider
+
 [Flock Safety CEO speaks out after LAPD suspends use of company's surveillance cameras](https://abc7.com/post/flock-safety-ceo-speaks-lapd-suspends-use-companys-surveillance-cameras/19558358/) — ABC7 Los Angeles
 
 [Flock Cameras Vanish as Cities Bag Them and Cancel Contracts Amid Privacy Revolt](https://www.webpronews.com/flock-cameras-vanish-as-cities-bag-them-and-cancel-contracts-amid-privacy-revolt/) — WebProNews
