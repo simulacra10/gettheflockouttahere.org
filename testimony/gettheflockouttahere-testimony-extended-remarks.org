@@ -1,0 +1,290 @@
+#+TITLE: GetTheFlockOuttaHere.org Testimony
+#+SUBTITLE: Easton, MD Town Council - Extended Remarks
+#+AUTHOR: Norman Bauer, Director of GetTheFlockOuttaHere.org 
+#+LANGUAGE: en
+#+OPTIONS: toc:2 num:nil
+#+STARTUP: overview
+#+LATEX_HEADER: \usepackage[margin=1in]{geometry}
+#+LATEX_HEADER: \usepackage{ragged2e}
+#+LATEX_HEADER: \usepackage{titling}
+#+LATEX_HEADER: \setlength{\parindent}{0pt}
+#+LATEX_HEADER: \setlength{\parskip}{0.75em}
+#+LATEX_HEADER: \pretitle{\begin{flushleft}\LARGE\bfseries}
+#+LATEX_HEADER: \posttitle{\par\end{flushleft}}
+#+LATEX_HEADER: \preauthor{\begin{flushleft}\large}
+#+LATEX_HEADER: \postauthor{\par\end{flushleft}}
+#+LATEX_HEADER: \predate{\begin{flushleft}}
+#+LATEX_HEADER: \postdate{\par\end{flushleft}}
+#+LATEX: \RaggedRight
+
+* Extended Remarks Regarding Automated License Plate Readers in Easton
+
+Mayor Cook, Council President, and members of the Town Council:
+
+My name is Norman Bauer. I live at 9109 Honeysuckle Drive in Easton, and I am the director of GetTheFlockOuttaHere.org.
+
+I am submitting these extended remarks concerning the Flock Safety automated license plate readers currently operating at Lowe’s in Easton and the proposed ordinance accompanying this statement.
+
+Our position is straightforward: the Town of Easton should prohibit the operation of automated license plate reader systems within its jurisdiction.
+
+* Private property is not a jurisdictional escape hatch
+
+The first objection we expect to hear is that the Flock cameras are located on private property.
+
+Easton’s own Code disposes of that argument.
+
+Section 18-17 prohibits retail establishments from providing customers with single-use disposable plastic bags at the point of sale. The Town has already prohibited a specific business activity conducted by private businesses on private property because the Council determined that the activity produced harmful consequences for the broader community.
+
+The plastic-bag prohibition does not depend upon the Town owning the store, the checkout counter, or the property where the transaction occurs. The Town regulates the activity because it occurs within Easton and affects the public.
+
+The same principle applies to automated license plate readers.
+
+An ALPR operator should not be permitted to avoid municipal oversight merely by placing surveillance equipment on privately owned land. These cameras are positioned to systematically collect identifying information from members of the public. They record vehicles, convert license plates into searchable data, and associate those observations with a specific time and location.
+
+Their consequences extend far beyond the boundaries of the property on which the equipment stands.
+
+The Town also regulates activities, structures, installations, and uses on private property through zoning, permitting, property-maintenance standards, signage restrictions, public-safety requirements, inspections, and limitations on land use. Private ownership does not place an activity beyond the Town’s jurisdiction.
+
+The Council has already established the relevant principle: when a commercial practice conducted on private property imposes consequences on the community, Easton may prohibit that practice.
+
+The question, therefore, is not whether the cameras stand on private property.
+
+The question is whether this Council considers the systematic recording of the public’s movements less deserving of action than the distribution of disposable shopping bags.
+
+If Section 18-17 permits Easton to tell a retailer which type of bag it may hand to a customer at the checkout counter, the Council should not claim helplessness when a business installs equipment designed to identify, record, and catalog every vehicle that passes within its view.
+
+If the Town believes that some specific provision of Maryland law prevents it from prohibiting these installations, then it should identify that provision publicly. “Private property” alone is not a legal explanation.
+
+* These are not ordinary security cameras
+
+An automated license plate reader is materially different from a conventional security camera.
+
+An ordinary camera generally records a scene. An ALPR system is designed to identify vehicles, convert license plates into searchable data, associate those observations with a time and location, and store the resulting records in a database.
+
+That distinction is fundamental.
+
+A person who appears incidentally in the background of a security recording is not necessarily entered into a searchable system. An ALPR is specifically designed to transform a passing vehicle into a database entry.
+
+The system does not begin with suspicion. It begins with collection.
+
+Every vehicle is scanned first. Questions are asked later.
+
+That reverses the proper relationship between citizens and those who exercise government power. In a free society, surveillance should follow individualized suspicion. Information about the entire population should not be collected merely because some portion of it may later prove useful.
+
+* A license plate may be visible, but visibility is not consent
+
+Supporters of ALPR systems frequently argue that license plates are displayed publicly and may already be seen by police officers.
+
+That observation misses the point.
+
+There is a profound difference between an officer seeing a license plate while patrolling and an automated network systematically recording thousands of vehicles, attaching timestamps and locations, and making those records searchable after the fact.
+
+The concern is not that a plate can be seen.
+
+The concern is the creation of a persistent, searchable record of movement.
+
+A police officer who observes a vehicle at an intersection sees it in that moment. An automated system can preserve the observation, combine it with later observations, compare it against other databases, and reconstruct patterns that no individual officer could have observed through ordinary patrol work.
+
+Public visibility does not amount to consent to systematic tracking.
+
+A person walking down a public street may be visible to everyone nearby. That does not mean the person has consented to being continuously identified, cataloged, and entered into a searchable history of movements.
+
+The same principle applies here.
+
+* The system records the innocent by design
+
+These cameras do not distinguish between people suspected of crimes and people going to work, attending church, visiting family, shopping, seeing a doctor, meeting with an attorney, attending a political gathering, or simply driving through town.
+
+Everyone is collected.
+
+The innocent are not accidentally swept into the system. They constitute the overwhelming majority of the system’s data.
+
+That fact should concern every member of this Council.
+
+The Fourth Amendment tradition grew from opposition to general warrants and broad searches untethered from individualized suspicion. Modern surveillance technology should not be permitted to recreate the logic of a general search merely because the collection is automated and the information is stored on a computer.
+
+The principle remains the same: government power should be directed toward particular suspects based upon particular facts, not toward the indiscriminate collection of information about the general population.
+
+* Regulation is not enough
+
+Some may propose regulations governing access, retention, audits, permissible searches, or data sharing.
+
+Those measures may sound reassuring, but they do not resolve the central problem.
+
+A retention period can be extended.
+
+An access policy can be amended.
+
+A contract can be renewed under different terms.
+
+A database can be connected to additional agencies.
+
+A vendor can add new features.
+
+An emergency can be cited as justification for expanded use.
+
+An administration that promises restraint today cannot bind every administration that follows it.
+
+The existence of the infrastructure creates continuing pressure to use it more broadly. Once a surveillance system has been installed, normalized, and integrated into institutional operations, removing it becomes politically and practically more difficult.
+
+The strongest protection is not a policy promising that the system will be used responsibly.
+
+The strongest protection is refusing to permit the system.
+
+This is why we are not asking the Town merely to regulate automated license plate readers. We are demanding that the Town prohibit them.
+
+* Good intentions are not sufficient safeguards
+
+Supporters often defend these systems by pointing to serious crimes, stolen vehicles, kidnappings, or Amber Alerts.
+
+Those concerns are emotionally powerful, and no reasonable person dismisses them.
+
+But the existence of a legitimate objective does not automatically justify every investigative method that might prove useful.
+
+Nearly any surveillance power can be defended by imagining the most sympathetic possible case. The proper question is whether the routine, suspicionless collection of everyone’s movements is necessary, proportionate, and compatible with a free society.
+
+A system should not be judged only by its best conceivable use. It must also be judged by its ordinary use, its potential misuse, the incentives it creates, and the powers it places in the hands of future officials.
+
+Human beings operate these systems.
+
+Some will act responsibly. Some will make mistakes. Some will abuse access. Some will rely too heavily on inaccurate or incomplete information. The possibility of misuse is not an insult to law enforcement. It is a recognition that no institution should receive sweeping power on the assumption that every person who ever holds that power will exercise it perfectly.
+
+Our laws are supposed to account for human fallibility.
+
+* The warning is not new
+
+Speaking before the United States House of Representatives in 1984, Congressman and physician Dr. Ron Paul warned that millions of tax dollars were being spent on computer surveillance, calling it “a disgusting procedure for a professed free society.”
+
+That warning is even more relevant today.
+
+The technology is faster, cheaper, more interconnected, and vastly more powerful than it was in 1984. What once required large government systems can now be performed by compact roadside equipment connected to cloud databases.
+
+The technology has changed.
+
+The principle has not.
+
+A society cannot honestly describe itself as free while constructing systems designed to record the movements of ordinary people who are not suspected of wrongdoing.
+
+* Consent was never requested
+
+The people of Easton were not asked whether they consented to the installation of this surveillance infrastructure.
+
+There was no public referendum.
+
+There was no broad public debate before the cameras appeared.
+
+There was no meaningful opportunity for residents to decide whether every passing vehicle should be entered into a privately operated, searchable system.
+
+Consent cannot simply be assumed because the technology has already been installed.
+
+Silence is not consent.
+
+A lack of public awareness is not consent.
+
+The absence of immediate opposition is not consent.
+
+Our campaign represents a formal withdrawal of any consent that officials or private operators may have presumed.
+
+We are now aware of the system.
+
+We object to it.
+
+We are asking this Council to act before the technology becomes further entrenched.
+
+You are right. The testimony should not describe the ordinance the Council ought to write. It should demand adoption of the ordinance already placed before them. That draft already contains the comprehensive prohibition, definitions, private-property application, enforcement provisions, exclusions for ordinary security cameras, data deletion requirements, and restrictions on indirect government access. 
+
+Replace the existing section with this:
+
+* Our demand
+
+We are not asking the Town Council to study this issue indefinitely, develop a weaker substitute, or begin drafting an ordinance at some later date.
+
+We have already provided the Council with proposed ordinance language titled:
+
+#+begin_quote
+An Ordinance of the Town of Easton Amending Chapter 18 of the Town of Easton Code to Prohibit Automated License Plate Readers, Automated Vehicle Surveillance, and the Collection, Access, Use, or Disclosure of Automated Vehicle Surveillance Data
+#+end_quote
+
+We demand that the Town Council introduce and adopt that ordinance.
+
+The proposed ordinance was drafted to address the surveillance practice comprehensively rather than merely prohibiting a particular brand of camera. It applies to automated license plate readers and substantially similar or successor technologies, regardless of manufacturer, branding, ownership, technical method, or storage location.
+
+It prohibits automated vehicle surveillance on both public and private property within the Town. It prohibits the Town and covered Town persons from operating these systems, accessing their data, receiving alerts, submitting searches, or obtaining the same information indirectly through vendors, private entities, neighboring jurisdictions, regional networks, or other governmental agencies.
+
+It requires existing prohibited operations and access arrangements to cease. It requires accounts, alerts, integrations, contracts, and data-sharing arrangements to be disabled or terminated to the maximum extent permitted by law. It also establishes deletion requirements, enforcement procedures, penalties, whistleblower protections, and disciplinary consequences for knowing violations.
+
+The ordinance expressly protects ordinary premises-security cameras, doorbell cameras, manually recorded plate information connected to a particular incident, and the voluntary sharing of specific footage concerning a specifically identified event. The prohibition is directed at automated identification, indexing, aggregation, searching, alerting, and tracking, not at conventional security cameras.
+
+The Council therefore does not need to begin with a blank page.
+
+The ordinance has been drafted.
+
+The legislative findings have been stated.
+
+The prohibited conduct has been defined.
+
+The exclusions have been written.
+
+The enforcement mechanism has been supplied.
+
+We demand that a member of this Council introduce the proposed ordinance and that the Council hold the public legislative process necessary to bring it to a vote.
+
+Do not replace a prohibition with a retention policy.
+
+Do not substitute regulation for a ban.
+
+Do not reduce this demand to a discussion of one vendor, one camera model, or one installation.
+
+Introduce the ordinance.
+
+Debate it publicly.
+
+Pass it.
+
+* Conclusion
+
+Easton does not have a legitimate option to continue allowing automated, suspicionless vehicle surveillance.
+
+The Town has a duty to protect the rights, liberty, safety, and welfare of its residents. That duty includes preventing private companies, government agencies, and surveillance networks from systematically identifying, recording, cataloging, and tracking people who are not suspected of any crime.
+
+The people of Easton are not required to accept the recording of their movements while officials deliberate over how much surveillance may be tolerated.
+
+The burden is not upon residents to prove that they deserve privacy.
+
+The burden belongs upon those who claim the authority to identify, record, search, analyze, and reconstruct the movements of the public.
+
+That burden has not been met.
+
+The people of Easton were never asked for their consent. Silence was mistaken for consent because most residents did not know the system existed.
+
+We know now.
+
+We object now.
+
+Any consent that may have been presumed is expressly withdrawn.
+
+The Town’s duty is clear.
+
+The cameras must be removed.
+
+The surveillance must end.
+
+The ordinance placed before this Council must be introduced, considered publicly, and adopted.
+
+There is no acceptable compromise that leaves the infrastructure operating.
+
+There is no acceptable regulation that converts an illegitimate system into a legitimate one.
+
+There is no acceptable policy that permits the indiscriminate collection of the public’s movements so long as officials promise to use the information responsibly.
+
+Remove the cameras.
+
+Fulfill the Town’s duty to protect the people of Easton.
+
+Adopt the proposed ordinance.
+
+Respectfully submitted,
+
+Norman Bauer
+Director, GetTheFlockOuttaHere.org
+Easton, Maryland
