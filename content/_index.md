@@ -17,7 +17,7 @@ If you oppose mass surveillance in Easton, contact the mayor and Town Council, a
 
 [Take Action](/take-action/).
 
-## In the news
+## In the news {#news}
 [Flock, Ring and Atlanta’s network of more than 28,000 integrated cameras haven’t improved city’s crime clearance rates](https://atlpresscollective.com/2026/07/28/flock-cameras-atlanta-clearance-rates/) - Atlanta Community Press Collective
 
 [In one California town, Flock misread license plates in 71% of the alerts it sent to police](https://www.businessinsider.com/flock-camera-misread-license-plate-reader-california-roseville-police-2026-7) — Business Insider

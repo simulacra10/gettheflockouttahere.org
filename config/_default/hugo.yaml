@@ -15,6 +15,11 @@ markup:
       # (community-link, council-table) that emit HTML; without this,
       # Goldmark silently strips or escapes their output.
       unsafe: true
+    parser:
+      attribute:
+        # Lets a heading declare its own anchor id, e.g.
+        # `## In the news {#news}`, instead of the auto-generated slug.
+        title: true
   highlight:
     noClasses: false
 

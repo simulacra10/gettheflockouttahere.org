@@ -5,6 +5,14 @@ Format based on Keep a Changelog (keepachangelog.com).
 
 ## [Unreleased]
 
+## [2026-07-31]
+### Added
+- Added a new Atlanta clearance-rates story to the home page news list.
+- Gave "In the news" a stable `#news` anchor id (`## In the news {#news}`)
+  instead of the auto-generated `#in-the-news` slug, so it can be linked
+  to directly. Required enabling Goldmark's heading-attribute parser
+  (`markup.goldmark.parser.attribute.title` in `hugo.yaml`).
+
 ## [2026-07-30]
 ### Added
 - Added a secondary "Join the Discord" button beside the home page's
