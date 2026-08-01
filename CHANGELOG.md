@@ -7,6 +7,15 @@ Format based on Keep a Changelog (keepachangelog.com).
 
 ## [2026-07-31]
 ### Added
+- Added a new "Line of Sight" update post about camera placement near
+  Lowe's. Fixed as authored: it used `_index.md` (branch bundle) instead
+  of `index.md` (leaf bundle), which would have made it its own section
+  and hidden it from the updates listing; also had `draft: true`, which
+  would have excluded it from the build entirely. Also downsized the 7
+  source photos from full-resolution phone originals (~25MB total) to
+  a 1600px max dimension at quality 82 (~2.2MB total).
+
+### Added
 - Added a YouTube nav link (external). `nav.html` didn't distinguish
   external (`url:`) from internal (`pageRef:`) menu entries the way
   `footer.html` already did — fixed the same gap there too, so external
