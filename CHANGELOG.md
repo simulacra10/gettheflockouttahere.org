@@ -5,6 +5,13 @@ Format based on Keep a Changelog (keepachangelog.com).
 
 ## [Unreleased]
 
+## [2026-08-01]
+### Added
+- Added a new "How Bad Does It Have to Get?" update post. Same authoring
+  slip as the previous post: it used `_index.md` (branch bundle) instead
+  of `index.md` (leaf bundle), which would have hidden it from the
+  updates listing — renamed to fix.
+
 ## [2026-07-31]
 ### Added
 - Added a new "Line of Sight" update post about camera placement near
