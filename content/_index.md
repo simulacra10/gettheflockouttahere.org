@@ -1,7 +1,7 @@
 ---
 title: "Every car that passes gets read."
-subhead: "Easton already has two Flock Safety automatic license plate reader cameras installed. That is two too many. Here's what that means and how to help get them removed."
-description: "Easton already has two Flock Safety automatic license plate reader cameras installed. That is two too many. Here's what that means and how to help get them removed."
+subhead: "Easton already has three Flock Safety automatic license plate reader cameras installed. That is three too many. Here's what that means and how to help get them removed."
+description: "Easton already has three Flock Safety automatic license plate reader cameras installed. That is three too many. Here's what that means and how to help get them removed."
 ---
 Americans have always understood that government power needs limits. Before the Revolution, British officials used general warrants and writs of assistance to search broadly without naming a specific person, place, or crime. The Founding generation rejected that kind of power because government should not be allowed to investigate everyone in the hope of finding someone who has done something wrong.
 
