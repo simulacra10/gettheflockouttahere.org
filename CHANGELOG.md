@@ -7,6 +7,13 @@ Format based on Keep a Changelog (keepachangelog.com).
 
 ## [2026-07-31]
 ### Added
+- Added a YouTube nav link (external). `nav.html` didn't distinguish
+  external (`url:`) from internal (`pageRef:`) menu entries the way
+  `footer.html` already did — fixed the same gap there too, so external
+  links get the raw URL and `target="_blank"` instead of being run
+  through `relLangURL`.
+
+### Added
 - Added a new Atlanta clearance-rates story to the home page news list.
 - Gave "In the news" a stable `#news` anchor id (`## In the news {#news}`)
   instead of the auto-generated `#in-the-news` slug, so it can be linked

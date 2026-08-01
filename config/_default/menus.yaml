@@ -20,6 +20,9 @@ main:
   - name: "Updates"
     pageRef: "/updates/"
     weight: 70
+  - name: "YouTube"
+    url: "https://www.youtube.com/channel/UC544csPd_zgQtw8L73BeoxA"
+    weight: 75
   - name: "About"
     pageRef: "/about/"
     weight: 80

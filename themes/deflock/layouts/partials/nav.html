@@ -6,9 +6,11 @@
     <ul class="flex flex-wrap items-center gap-x-3 gap-y-2">
       {{ range $index, $item := .Site.Menus.main }}
       {{ if gt $index 0 }}<li class="font-mono text-xs text-ink-500" aria-hidden="true">|</li>{{ end }}
+      {{ $external := strings.HasPrefix $item.URL "http" }}
       <li>
         <a
-          href="{{ $item.URL | relLangURL }}"
+          href="{{ if $external }}{{ $item.URL }}{{ else }}{{ $item.URL | relLangURL }}{{ end }}"
+          {{ if $external }}target="_blank" rel="noopener noreferrer"{{ end }}
           class="no-underline font-mono text-xs uppercase tracking-wide pb-1 border-b-2 {{ if $.IsMenuCurrent "main" $item }}border-accent-600 text-ink-900 font-semibold{{ else }}border-transparent text-ink-700 hover:text-accent-600 hover:border-accent-600/40{{ end }}"
         >{{ $item.Name }}</a>
       </li>
