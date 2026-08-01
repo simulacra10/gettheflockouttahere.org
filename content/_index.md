@@ -17,6 +17,20 @@ If you oppose mass surveillance in Easton, contact the mayor and Town Council, a
 
 [Take Action](/take-action/).
 
+## Questions we need answers to
+<div style="display: flex; justify-content: center;">
+
+| Question                | Current answer                                                                       |
+|-------------------------|--------------------------------------------------------------------------------------|
+| How many installations? | [Three visually identified](https://gettheflockouttahere.org/updates/line-of-sight/) |
+| Who owns them?          | It has not been officially confirmed that they are owned by Lowes                    |
+| Who has access?         | Not yet disclosed                                                                    |
+| Retention period?       | Not yet disclosed                                                                    |
+| Public approval?        | No public authorization located to date                                              |
+
+
+</div>
+
 ## In the news {#news}
 [Flock, Ring and Atlanta’s network of more than 28,000 integrated cameras haven’t improved city’s crime clearance rates](https://atlpresscollective.com/2026/07/28/flock-cameras-atlanta-clearance-rates/) - Atlanta Community Press Collective
 

@@ -163,7 +163,7 @@ The privacy concern is therefore not that a license plate was visible in public.
 
 ## What we can presently say about Easton
 
-DeFlock Easton has identified **three Flock ALPR installations associated with Easton**. That local count should be supported on this site with photographs, mapped locations, a Town record, a police record, a contract, or another reproducible source before readers are asked to treat the number as independently verified.
+DeFlock Easton has identified **three Flock ALPR installations associated with Easton**. 
 
 The Town should publicly disclose, at minimum:
 

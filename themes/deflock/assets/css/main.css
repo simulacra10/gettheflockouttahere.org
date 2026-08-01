@@ -74,6 +74,50 @@
   .prose-site li::marker {
     @apply text-accent-600;
   }
+  /* Tailwind's preflight sets border-collapse + zero border-spacing on
+     every table with no padding of its own, so a plain markdown pipe
+     table renders with columns touching edge-to-edge. */
+  .prose-site table {
+    @apply w-full border-collapse text-left text-[0.95rem];
+  }
+  .prose-site th,
+  .prose-site td {
+    @apply border border-ink-900/10 px-4 py-2.5;
+  }
+  .prose-site th {
+    @apply font-mono text-xs font-semibold uppercase tracking-wide text-ink-900 bg-ink-900/5;
+  }
+  /* FAQ-style collapsible questions. Native <details>/<summary> so it's
+     collapsed-by-default and keyboard/screen-reader accessible with no
+     JS. Each question is a direct child of .prose-site, so it doesn't
+     pick up the space-y-4 rhythm applied to .prose-site's own children
+     — spacing between summary and body is set explicitly below. */
+  .prose-site details {
+    @apply border-b border-ink-900/10;
+  }
+  .prose-site details:first-of-type {
+    @apply border-t;
+  }
+  .prose-site summary {
+    @apply cursor-pointer select-none list-none py-4 flex items-baseline justify-between gap-4
+           font-sans text-base sm:text-lg font-semibold text-ink-900;
+  }
+  .prose-site summary::-webkit-details-marker {
+    display: none;
+  }
+  .prose-site summary::after {
+    content: "+";
+    @apply font-mono text-lg leading-none text-accent-600 flex-shrink-0;
+  }
+  .prose-site details[open] summary::after {
+    content: "\2212";
+  }
+  .prose-site details > :not(summary) + * {
+    @apply mt-3;
+  }
+  .prose-site details > :last-child {
+    @apply pb-5;
+  }
 
   /* Small mono uppercase label naming what *kind* of record a section is
      (BUDGET RECORD, CITATION INDEX, ...) — a real dossier convention, not
