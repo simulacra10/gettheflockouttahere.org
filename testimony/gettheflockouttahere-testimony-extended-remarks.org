@@ -131,7 +131,7 @@ The strongest protection is not a policy promising that the system will be used 
 
 The strongest protection is refusing to permit the system.
 
-This is why we are not asking the Town merely to regulate automated license plate readers. We are demanding that the Town prohibit them.
+This is why we are not asking the Town merely to regulate automated license plate readers. We respectfully ask the Town to prohibit them.
 
 * Good intentions are not sufficient safeguards
 
@@ -191,11 +191,7 @@ We object to it.
 
 We are asking this Council to act before the technology becomes further entrenched.
 
-You are right. The testimony should not describe the ordinance the Council ought to write. It should demand adoption of the ordinance already placed before them. That draft already contains the comprehensive prohibition, definitions, private-property application, enforcement provisions, exclusions for ordinary security cameras, data deletion requirements, and restrictions on indirect government access. 
-
-Replace the existing section with this:
-
-* Our demand
+* Our request to the Council
 
 We are not asking the Town Council to study this issue indefinitely, develop a weaker substitute, or begin drafting an ordinance at some later date.
 
@@ -205,7 +201,7 @@ We have already provided the Council with proposed ordinance language titled:
 An Ordinance of the Town of Easton Amending Chapter 18 of the Town of Easton Code to Prohibit Automated License Plate Readers, Automated Vehicle Surveillance, and the Collection, Access, Use, or Disclosure of Automated Vehicle Surveillance Data
 #+end_quote
 
-We demand that the Town Council introduce and adopt that ordinance.
+We respectfully request that a member of the Town Council introduce the proposed ordinance and that the Council consider and adopt it.
 
 The proposed ordinance was drafted to address the surveillance practice comprehensively rather than merely prohibiting a particular brand of camera. It applies to automated license plate readers and substantially similar or successor technologies, regardless of manufacturer, branding, ownership, technical method, or storage location.
 
@@ -227,19 +223,19 @@ The exclusions have been written.
 
 The enforcement mechanism has been supplied.
 
-We demand that a member of this Council introduce the proposed ordinance and that the Council hold the public legislative process necessary to bring it to a vote.
+We respectfully ask a member of this Council to introduce the proposed ordinance and ask the Council to hold the public legislative process necessary to bring it to a vote.
 
-Do not replace a prohibition with a retention policy.
+We ask the Council not to replace a prohibition with a retention policy.
 
-Do not substitute regulation for a ban.
+We ask the Council not to substitute regulation for a ban.
 
-Do not reduce this demand to a discussion of one vendor, one camera model, or one installation.
+We ask the Council not to reduce this request to a discussion of one vendor, one camera model, or one installation.
 
-Introduce the ordinance.
+Please introduce the ordinance.
 
-Debate it publicly.
+Please debate it publicly.
 
-Pass it.
+Please adopt it.
 
 * Conclusion
 
@@ -265,23 +261,15 @@ Any consent that may have been presumed is expressly withdrawn.
 
 The Town’s duty is clear.
 
-The cameras must be removed.
+We respectfully ask that the cameras be removed, that the surveillance be brought to an end, and that the ordinance placed before this Council be introduced, considered publicly, and adopted.
 
-The surveillance must end.
+We do not believe a compromise that leaves the infrastructure operating adequately protects the people of Easton.
 
-The ordinance placed before this Council must be introduced, considered publicly, and adopted.
+We do not believe regulation can convert this illegitimate system into a legitimate one.
 
-There is no acceptable compromise that leaves the infrastructure operating.
+We do not believe any policy can justify the indiscriminate collection of the public’s movements merely by promising that the information will be used responsibly.
 
-There is no acceptable regulation that converts an illegitimate system into a legitimate one.
-
-There is no acceptable policy that permits the indiscriminate collection of the public’s movements so long as officials promise to use the information responsibly.
-
-Remove the cameras.
-
-Fulfill the Town’s duty to protect the people of Easton.
-
-Adopt the proposed ordinance.
+We respectfully ask the Town to remove the cameras, fulfill its duty to protect the people of Easton, and adopt the proposed ordinance.
 
 Respectfully submitted,
 
