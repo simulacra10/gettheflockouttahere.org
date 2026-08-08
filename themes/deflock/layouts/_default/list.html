@@ -11,6 +11,9 @@
   </div>
 
   <section class="max-w-3xl mx-auto text-center">
+    <a href="{{ "/feed-birds-not-databases/" | relURL }}" class="inline-block mb-4 font-sans font-bold uppercase tracking-wide text-base sm:text-lg text-[#1DA1F2] no-underline hover:underline">
+      Feed Birds, Not Databases — Friday, Aug 14, 6pm at Lowe's
+    </a>
     <h1 class="text-4xl sm:text-5xl leading-[1.05]">{{ .Title }}</h1>
     {{ with .Params.subhead }}
     <p class="font-serif text-lg text-ink-700 mt-4 max-w-2xl mx-auto">{{ . }}</p>
@@ -53,6 +56,16 @@
       Join the Discord
     </a>
   </div>
+
+  <section class="max-w-2xl mx-auto text-center mt-10">
+    <p class="eyebrow mb-2">Stay informed</p>
+    <h2 class="text-2xl">Get updates on the campaign</h2>
+    <div class="mt-4">
+      <a href="https://a61133f8.sibforms.com/v2/serve/MUIFAMYA74Ll-nFqdrZj63buoxBAlpIyjCY7745RXYJRnWbD0hi9JVCyZo0LCXLOQi9tblRUKDhgPgriaJkYgePyRNdvWDhhD6r22s24F4uSm7Crl-QT__hU-LfWhCC_513wI2KizA_zhTYzVo_n20nAB6rQ-R-BFMAHJIseTQ2RFP1OD_OvCucUrQxJGrJVhlbXsJWLWXZbmgu17g==" target="_blank" rel="noopener noreferrer" class="btn-primary">
+        Sign up for updates
+      </a>
+    </div>
+  </section>
 
   <section class="prose-site mt-10">
     {{ .Content }}

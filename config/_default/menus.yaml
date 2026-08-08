@@ -1,4 +1,7 @@
 main:
+  - name: "Feed Birds, Not Databases"
+    pageRef: "/feed-birds-not-databases/"
+    weight: 5
   - name: "What is Flock?"
     pageRef: "/what-is-flock/"
     weight: 10

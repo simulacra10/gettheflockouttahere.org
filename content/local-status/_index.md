@@ -2,7 +2,7 @@
 title: "Local Status"
 layout: single
 description: "Where things stand with Flock ALPR cameras in Easton, and what it will take to get them removed."
-_build:
+build:
   render: false
   list: false
 ---
