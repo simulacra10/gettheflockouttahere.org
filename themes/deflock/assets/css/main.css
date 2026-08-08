@@ -34,6 +34,14 @@
   .prose-site {
     @apply max-w-3xl mx-auto space-y-4 leading-relaxed text-ink-700 font-serif text-[1.05rem];
   }
+  /* space-y-4 above only spaces direct children. Org content wraps each
+     heading's body in a nested outline-text div (go-org's section markup),
+     which puts those paragraphs at grandchild depth — this catches them
+     regardless of nesting so org posts don't render as a single run-on
+     block. */
+  .prose-site p + p {
+    @apply mt-4;
+  }
   .prose-site :is(h1, h2, h3, h4) {
     @apply font-sans text-ink-900;
   }

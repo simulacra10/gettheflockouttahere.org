@@ -1,0 +1,48 @@
+#+title: First Email to Town
+#+date: 2026-08-08
+#+draft: false
+#+slug: first-email-to-town
+#+tags: ALPR Flock-Safety Easton-Maryland Surveillance Privacy
+#+description: Email sent to Mayor Cook and the Town Council - August 8, 2026 - regarding banning Flock Safety cameras
+#+summary: An email urging Mayor Cook and the Easton Town Council to adopt an ordinance prohibiting automated license plate reader systems in Easton.
+** SUBJECT: Proposed Ordinance Regarding Automated License Plate Readers
+
+Mayor Cook, Council President, and Members of the Easton Town Council,
+
+As you prepare to attend the MACo Summer Conference in Ocean City, I wanted to send you the attached proposed ordinance concerning automated license plate reader systems in Easton.
+
+I respectfully ask that you consider adopting an ordinance along these lines (see attached PDF or visit https://gettheflockouttahere.org/the-ordinance/) to prohibit the systematic collection and sharing of vehicle-location data within the Town.
+
+My concern is not with traditional cameras or ordinary police investigative work. It is with the creation of a system capable of continuously recording the movements of residents who are not suspected of any crime and making that information searchable and accessible through a much larger surveillance network.
+
+I recognize that this is an emerging issue and that reasonable people can approach it from different perspectives. That is precisely why I believe Easton should address it now, while we still have the opportunity to decide locally what limits should exist before this technology becomes an established part of our infrastructure.
+
+Since you will be meeting with officials from throughout Maryland in Ocean City, I hope you might also have an opportunity to discuss ALPR technology, data sharing, and municipal authority with some of your colleagues there. I suspect Easton will not be the last Maryland community to confront these questions.
+
+The proposed ordinance is attached for your review. I respectfully ask the Town to adopt a clear prohibition on automated license plate reader systems and the collection, use, or access of ALPR-derived data within Easton.
+
+The details of the ordinance can be discussed and refined through the legislative process, but I believe the central principle should remain clear: Easton should prohibit this form of persistent, suspicionless vehicle tracking rather than attempt to regulate or manage it.
+
+I appreciate your willingness to consider it, and I appreciate the time each of you gives to serving our community.
+
+Respectfully,
+
+Norman Bauer
+Director
+DeFlock Easton
+GetTheFlockOuttaHere.org
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
