@@ -22,7 +22,7 @@
     </div>
   </header>
   <div class="prose-site !mx-0">
-    {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
+    {{ if not .Params.hide_summary }}{{ with .Params.summary }}<p>{{ . }}</p>{{ end }}{{ end }}
     {{ .Content }}
   </div>
 </article>
