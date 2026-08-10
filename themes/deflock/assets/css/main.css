@@ -36,10 +36,10 @@
   }
   /* space-y-4 above only spaces direct children. Org content wraps each
      heading's body in a nested outline-text div (go-org's section markup),
-     which puts those paragraphs at grandchild depth — this catches them
-     regardless of nesting so org posts don't render as a single run-on
-     block. */
-  .prose-site p + p {
+     which puts paragraphs and blockquotes at grandchild depth — this catches
+     them regardless of nesting so org posts (including block quotes) don't
+     render as a single run-on block. */
+  .prose-site :is(p, blockquote) + :is(p, blockquote) {
     @apply mt-4;
   }
   .prose-site :is(h1, h2, h3, h4) {

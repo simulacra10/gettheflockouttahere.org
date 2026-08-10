@@ -1,0 +1,64 @@
+#+title: BREAKING!! Council President Abbatiello Email Reply
+#+date: 2026-08-10
+#+draft: false
+#+slug: council-pres-email-reply
+#+tags: Easton Maryland, Flock Safety, ALPR, Surveillance, Privacy
+#+description: Council President Don Abbatiello responds to GetTheFlockOuttaHere.org's proposed ordinance banning automated license plate reader surveillance in Easton.
+
+* Council President Abbatiello Responds
+
+Earlier today, I received the following response from Easton Town Council President Don Abbatiello regarding the proposed ordinance to ban automated license plate reader surveillance in Easton.
+
+#+begin_quote
+Mr. Bauer,
+
+Thank you for the proposed ordinance and your concern about Flock Cameras in Easton. I will forward your proposal to the town attorney for review. We have had several meetings regarding the Flock Cameras set up at Lowe's involving myself, Mayor Cook, Chief Lowrey, and the town attorney. The town itself does not utilize Flock Cameras but I definitely understand the concern when people are filmed simply for driving by Lowe's.
+
+We have asked a store representative to attend a council meeting to speak on the subject before we vote to approve their recent PUD amendment. In the meantime, the town attorney’s office is looking into what can be done to limit their use in town.
+
+Thanks again for your time and effort.
+
+Don Abbatiello
+Easton Town Council
+#+end_quote
+
+This is an encouraging development. The Town is taking the issue seriously, senior officials have already held multiple meetings about the cameras at Lowe's, the Town Attorney is reviewing what authority Easton has to address their use, and Lowe's has been asked to send a representative to speak before the Council prior to a vote on its recent PUD amendment.
+
+Most importantly, Council President Abbatiello acknowledged the central concern directly: people are being filmed simply for driving by Lowe's.
+
+The goal of GetTheFlockOuttaHere.org remains the same. We are asking Easton to prohibit systematic automated license plate surveillance within the Town, not merely regulate how long the resulting data may be retained or who may access it.
+
+* My Reply
+
+I sent the following response:
+
+#+begin_quote
+Councilman Abbatiello,
+
+Thank you for the thoughtful response and for forwarding the proposed ordinance to the Town Attorney.
+
+I also appreciate hearing that the Town has already been discussing the Lowe’s cameras and has asked a Lowe’s representative to address the Council.
+
+When that meeting is scheduled, I would be glad to attend. If it would be useful to the Council, I would also be happy to answer any questions about the concerns behind the proposed ordinance or provide additional information.
+
+Thank you again for taking the issue seriously and for keeping me informed.
+
+Norman Bauer
+GetTheFlockOuttaHere.org
+#+end_quote
+
+* Keep the Pressure Up
+
+This is progress, but it is not the finish line.
+
+We have made it clear that we want this technology banned. From all appearances, Council President Abbatiello shares many of our concerns and agrees that something needs to be done.
+
+That is forward progress.
+
+Keep the respectful pressure up. Keep engaging the Mayor and Council. And keep reminding them that our goal is not merely to regulate automated license plate surveillance in Easton, but to end it.
+
+Feed birds, not databases.
+
+See you Friday evening at 6 PM, under the Flock camera by Ruby Tuesday.
+
+Norm
