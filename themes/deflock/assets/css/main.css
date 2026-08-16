@@ -67,7 +67,7 @@
   }
   /* Rhetorical asides set off with `>` in markdown (distinct from the
      hero pull-quote, which is its own bespoke component below). */
-  .prose-site blockquote {
+  .prose-site blockquote:not(.tiktok-embed) {
     @apply border-l-2 border-accent-600/50 pl-4 italic text-ink-900;
   }
   /* Tailwind's preflight strips default list markers site-wide; opt back
