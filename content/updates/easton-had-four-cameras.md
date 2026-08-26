@@ -1,7 +1,7 @@
 ---
 title: "Easton Had Four Cameras"
 date: 2026-08-24T17:52:51-04:00
-draft: true
+draft: false
 summary: "A quick update on the addition of an Axon camera and subsequent removal."
 ---
 You read that right, folks. Easton had four ALPR cameras. Now we are back to three.  
