@@ -7,6 +7,27 @@
       {{ range $index, $item := .Site.Menus.main }}
       {{ if gt $index 0 }}<li class="font-mono text-xs text-ink-500" aria-hidden="true">|</li>{{ end }}
       {{ $external := strings.HasPrefix $item.URL "http" }}
+      {{ if $item.Children }}
+      {{ $activeParent := false }}
+      {{ range $item.Children }}{{ if $.IsMenuCurrent "main" . }}{{ $activeParent = true }}{{ end }}{{ end }}
+      <li class="relative">
+        <details class="group">
+          <summary
+            class="cursor-pointer list-none no-underline font-mono text-xs uppercase tracking-wide pb-1 border-b-2 {{ if $activeParent }}border-accent-600 text-ink-900 font-semibold{{ else }}border-transparent text-ink-700 hover:text-accent-600 hover:border-accent-600/40{{ end }}"
+          >{{ $item.Name }}</summary>
+          <ul class="absolute left-0 top-full mt-2 min-w-max bg-plate border border-ink-900/10 shadow-md py-1 z-10">
+            {{ range $item.Children }}
+            <li>
+              <a
+                href="{{ .URL | relLangURL }}"
+                class="block no-underline font-mono text-xs uppercase tracking-wide px-3 py-1.5 whitespace-nowrap {{ if $.IsMenuCurrent "main" . }}text-accent-600 font-semibold{{ else }}text-ink-700 hover:text-accent-600{{ end }}"
+              >{{ .Name }}</a>
+            </li>
+            {{ end }}
+          </ul>
+        </details>
+      </li>
+      {{ else }}
       <li>
         <a
           href="{{ if $external }}{{ $item.URL }}{{ else }}{{ $item.URL | relLangURL }}{{ end }}"
@@ -14,6 +35,7 @@
           class="no-underline font-mono text-xs uppercase tracking-wide pb-1 border-b-2 {{ if $.IsMenuCurrent "main" $item }}border-accent-600 text-ink-900 font-semibold{{ else }}border-transparent text-ink-700 hover:text-accent-600 hover:border-accent-600/40{{ end }}"
         >{{ $item.Name }}</a>
       </li>
+      {{ end }}
       {{ end }}
     </ul>
   </nav>

@@ -127,6 +127,20 @@
     @apply pb-5;
   }
 
+  /* Nav dropdown for menu items with sub-pages (e.g. "Essays"). Native
+     <details>/<summary> so it opens on click with no JS, same convention
+     as the FAQ accordion above. */
+  nav summary::-webkit-details-marker {
+    display: none;
+  }
+  nav summary::after {
+    content: "\25BE";
+    @apply inline-block ml-1 text-[0.6rem] align-middle;
+  }
+  nav details[open] summary::after {
+    content: "\25B4";
+  }
+
   /* Small mono uppercase label naming what *kind* of record a section is
      (BUDGET RECORD, CITATION INDEX, ...) — a real dossier convention, not
      decoration. */

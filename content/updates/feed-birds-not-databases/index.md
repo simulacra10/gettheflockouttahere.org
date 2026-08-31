@@ -1,8 +1,12 @@
 ---
 title: "Feed Birds, Not Databases"
-layout: single
+date: 2026-08-14
+draft: false
+aliases: ["/feed-birds-not-databases/"]
 description: "A peaceful public demonstration against automated license plate surveillance in Easton. Friday, August 14 at 6:00 p.m., Lowe's on Glebe Road."
-images: ["/feed-birds-not-databases/FEED_BIRDS_NOT_DATABASES.png"]
+summary: "A peaceful public demonstration against automated license plate surveillance in Easton. Friday, August 14 at 6:00 p.m., Lowe's on Glebe Road."
+hide_summary: true
+images: ["/updates/feed-birds-not-databases/FEED_BIRDS_NOT_DATABASES.png"]
 ---
 
 ![Feed Birds, Not Databases event flyer: Friday, August 14, 6:00 p.m., near the Lowe's Flock camera at the Glebe Road entrance by Ruby Tuesday — bring birdseed](./FEED_BIRDS_NOT_DATABASES.png)

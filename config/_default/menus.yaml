@@ -1,19 +1,22 @@
 main:
-  - name: "Feed Birds, Not Databases"
-    pageRef: "/feed-birds-not-databases/"
-    weight: 5
+  - name: "Essays"
+    identifier: "essays"
+    weight: 10
   - name: "What is Flock?"
     pageRef: "/what-is-flock/"
+    parent: "essays"
     weight: 10
   - name: "Liberty Is Not the Price of Safety"
     pageRef: "/liberty-is-not-the-price-of-safety/"
+    parent: "essays"
     weight: 20
+  - name: "Consent Withdrawn"
+    pageRef: "/consent-withdrawn/"
+    parent: "essays"
+    weight: 30
   - name: "The Ordinance"
     pageRef: "/the-ordinance/"
     weight: 30
-  - name: "Consent Withdrawn"
-    pageRef: "/consent-withdrawn/"
-    weight: 40
   - name: "Take Action"
     pageRef: "/take-action/"
     weight: 50
