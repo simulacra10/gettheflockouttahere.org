@@ -17,6 +17,9 @@ main:
   - name: "The Ordinance"
     pageRef: "/the-ordinance/"
     weight: 30
+  - name: "Yard Signs"
+    pageRef: "/yard-signs/"
+    weight: 45
   - name: "Take Action"
     pageRef: "/take-action/"
     weight: 50
