@@ -141,6 +141,13 @@
     content: "\25B4";
   }
 
+  /* Image carousel horizontal scrollbar, sized up from the browser default
+     so it reads as an obvious "there's more, scroll" affordance rather
+     than a barely-visible hairline. */
+  .carousel-scroll::-webkit-scrollbar {
+    height: 14px;
+  }
+
   /* Small mono uppercase label naming what *kind* of record a section is
      (BUDGET RECORD, CITATION INDEX, ...) — a real dossier convention, not
      decoration. */
