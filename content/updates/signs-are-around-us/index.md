@@ -5,7 +5,7 @@ draft: false
 summary: "Our yard signs are now in the wild. Keep an eye out for them in your neighborhood."
 ---
 
-It was a busy Labor Day weekend. I spent it staking signs in yards all over town. Here are some pictures of ones I have staked so far.
+It was a busy Labor Day weekend. Thanks to the generosity of one of our own who has asked to remain nameless, I spent it staking signs in yards all over town. Here are some pictures of ones I have staked so far.
 
 {{< carousel >}}
 
