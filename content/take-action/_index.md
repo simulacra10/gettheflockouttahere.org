@@ -18,3 +18,9 @@ description: "How to get involved: community channels, contact templates, and th
 ## Easton Town Council Meeting schedule
 
 Town Council meetings can also be viewed on Mid Shore Community Television channel 98 (MCTV98). They are also  streamed  [live](https://www.eastonmd.gov/129/Agendas-Minutes)
+
+## October 2026 Town Council Meetings
+
+Monday October 5th @ 5:30PM
+
+Monday October 19th @ 5:30 PM
