@@ -1,7 +1,7 @@
 ---
 title: "Candidate Survey: Fixed-Point ALPR and Mass Surveillance"
 date: 2026-09-28T00:00:00-04:00
-draft: true
+draft: false
 summary: "We asked every candidate for Talbot County Council five yes-or-no questions about fixed-point license plate readers and mass surveillance. Here are the questions, with candidate responses to follow."
 tags:
   - "Flock Safety"
