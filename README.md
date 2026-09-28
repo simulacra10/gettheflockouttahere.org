@@ -31,15 +31,13 @@ Concretely, that means you're free to:
 - **Fork the whole site** and retarget it at your own town, county, or
   state — swap the logo, the facts, the officials, the news links, keep
   the structure.
-- **Take just the pieces you want** — the public-changelog-for-corrections
-  pattern, the sourced-citation shortcode, the council contact table, the
-  "evidence dossier" design system — and drop them into something else
-  entirely.
+- **Take just the pieces you want** — the council contact table, the
+  plain-text rendition of every page, the "evidence dossier" design
+  system — and drop them into something else entirely.
 - **Modify anything.** Rewrite the argument, change the ask, translate it,
   redesign it. It's yours.
 - **Use it for a different fight.** The mechanics here (sourced claims,
-  public corrections, a direct ask, a way to contact power) aren't specific
-  to ALPR cameras.
+  a direct ask, a way to contact power) aren't specific to ALPR cameras.
 
 The only real request: if a fork of this helps get cameras out of your
 town, we'd love to hear about it. Open an issue, or find us on
@@ -52,10 +50,10 @@ curious.
 - **Tailwind CSS**, compiled as a pre-build step.
 - A custom theme at `themes/deflock/` — layouts, shortcodes, and the whole
   visual system are in there, separate from content.
-- A **public changelog** (`/changelog/`) as a deliberate design pattern:
-  when a published fact turns out to be wrong, it gets corrected in the
-  open, not quietly edited away. Credibility is the whole asset on a page
-  arguing against a surveillance company.
+- A **plain-text version** (`index.txt`) of every page, linked
+  automatically alongside the HTML.
+- `CHANGELOG.md` tracks engineering changes only (layouts, config,
+  deployment). There is no public-facing changelog section.
 - `ARCHITECTURE.md` documents the stack, content model, and conventions in
   more detail than this file does.
 

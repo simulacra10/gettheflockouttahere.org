@@ -37,23 +37,28 @@ content model, and deployment pipeline.
 ## 4. Repository layout
 
 ```
-deflockeaston/
+gettheflockouttahere.org/
 ├── content/
 │   ├── _index.md
 │   ├── what-is-flock/_index.md
-│   ├── local-status/_index.md   # disabled: `_build: {render: false, list: false}`
+│   ├── local-status/_index.md   # disabled: `build: {render: false, list: false}`
 │   ├── liberty-is-not-the-price-of-safety/
 │   │   ├── _index.md
 │   │   └── benjamin-franklin-liberty.jpg
+│   ├── consent-withdrawn/_index.md
 │   ├── the-ordinance/
 │   │   ├── _index.md
 │   │   ├── easton-alpr-ban-ordinance.pdf
 │   │   └── easton-alpr-ban-ordinance.odt
+│   ├── yard-signs/
+│   │   ├── _index.md
+│   │   └── DeFlockEaston-v2.png
 │   ├── take-action/_index.md
 │   ├── faq/_index.md
 │   ├── updates/
 │   │   ├── _index.md
-│   │   └── <slug>/index.md
+│   │   ├── <slug>.md            # single-file post, no bundled assets
+│   │   └── <slug>/index.md      # leaf bundle (or index.org), with images/PDFs
 │   └── about/_index.md
 ├── data/
 │   └── council.yaml
@@ -74,8 +79,10 @@ deflockeaston/
 │       │   │   ├── nav.html
 │       │   │   └── footer.html
 │       │   └── shortcodes/
+│       │       ├── carousel.html        # page-bundle images, CSS scroll-snap
 │       │       ├── community-link.html
-│       │       └── council-table.html
+│       │       ├── council-table.html
+│       │       └── tiktok.html
 │       ├── assets/
 │       │   └── css/
 │       │       └── main.css     # Tailwind entry point
@@ -92,8 +99,18 @@ deflockeaston/
 │       ├── hugo.yaml            # sets `theme: deflock`
 │       ├── menus.yaml
 │       └── params.yaml
+├── archetypes/
+│   └── default.org              # org-mode front matter for `hugo new`
+├── drafts/                      # working source files, never published
+├── testimony/                   # council testimony (.org/.tex/.pdf), not published
+├── .github/
+│   └── workflows/
+│       └── gh-pages-preview.yml # GitHub Pages preview build
 ├── package.json
 ├── wrangler.toml
+├── ARCHITECTURE.md
+├── README.md
+├── LICENSE
 └── CHANGELOG.md
 ```
 
@@ -109,7 +126,9 @@ only for this site and isn't published separately.
 /                              Home: the issue, the ask, the stakes
 /what-is-flock/                Explainer: ALPR, what cameras capture, how data flows
 /liberty-is-not-the-price-of-safety/  Franklin-quote essay, the campaign's manifesto
+/consent-withdrawn/            Essay on consent of the governed
 /the-ordinance/                Draft ban ordinance text, plus PDF/ODT downloads
+/yard-signs/                   How to get a yard sign
 /take-action/                  Discord link, contact templates, meeting schedule
 /faq/
 /updates/                      Dated posts: council meetings, records requests, news
@@ -118,7 +137,7 @@ only for this site and isn't published separately.
 ```
 
 Every top-level article page (`what-is-flock`, `liberty-is-not-the-price-of-safety`,
-`the-ordinance`, `take-action`, `faq`, `about`) is a **branch bundle**
+`consent-withdrawn`, `the-ordinance`, `yard-signs`, `take-action`, `faq`, `about`) is a **branch bundle**
 (`_index.md`, defining its own section) and **must set `layout: single`**
 in front matter, or Hugo silently renders it through `_default/list.html`'s
 generic fallback instead — it still builds, still looks plausible, but
